@@ -1,1 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Happy Birthday RAZAN</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Dancing+Script:wght@700&display=swap');
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none; /* منع التحديد لتحسين المظهر */
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+        }
+
+        /* المطر الرقمي */
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            display: block;
+        }
+
+        /* شاشة البداية لتفعيل الصوت */
+        #start-screen {
+            position: absolute;
+            z-index: 50;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.92);
+            backdrop-filter: blur(4px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            cursor: pointer;
+            transition: opacity 1s ease-out;
+        }
+
+        .tap-btn {
+            background: transparent;
+            border: 2px solid #ff1493;
+            color: #ff1493;
+            padding: 15px 40px;
+            font-size: 1.5rem;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 0 15px #ff1493, inset 0 0 10px #ff1493;
+            animation: pulse 1.5s infinite;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            transition: 0.2s;
+        }
+
+        .tap-btn:active {
+            transform: scale(0.96);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 15px #ff1493; }
+            50% { transform: scale(1.05); box-shadow: 0 0 25px #ff69b4; }
+            100% { transform: scale(1); box-shadow: 0 0 15px #ff1493; }
+        }
+
+        /* النصوص المتغيرة بالمنتصف */
+        .content {
+            position: absolute;
+            z-index: 10;
+            text-align: center;
+            color: #ff69b4;
+            text-shadow: 0 0 20px #ff1493, 0 0 40px #ff1493;
+            font-size: 4.5rem;
+            text-transform: uppercase;
+            opacity: 0;
+            transition: opacity 0.6s ease-in-out, transform 0.6s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            transform: scale(0.8);
+            letter-spacing: 4px;
+            font-weight: 800;
+            white-space: nowrap;
+            background: linear-gradient(135deg, #ffb6c1, #ff1493);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: none;
+        }
+        
+        /* إعادة تعريف التوهج للنص الشفاف */
+        .content.show {
+            opacity: 1;
+            transform: scale(1.1);
+            text-shadow: 0 0 15px #ff69b4;
+        }
+
+        /* القلوب المتساقطة */
+        .heart {
+            position: absolute;
+            color: #ff1493;
+            font-size: 24px;
+            top: -30px;
+            user-select: none;
+            z-index: 5;
+            animation: fall linear forwards;
+            text-shadow: 0 0 10px #ff69b4;
+            pointer-events: none;
+        }
+
+        @keyframes fall {
+            to { transform: translateY(105vh) rotate(360deg); }
+        }
+
+        /* الرسالة النهائية */
+        #final-message {
+            position: absolute;
+            z-index: 20;
+            background: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 105, 180, 0.5);
+            border-radius: 32px;
+            padding: 35px 30px;
+            text-align: center;
+            max-width: 85%;
+            width: 460px;
+            opacity: 0;
+            transform: translateY(60px) scale(0.95);
+            transition: opacity 1.8s ease, transform 1.8s cubic-bezier(0.2, 0.9, 0.3, 1.2);
+            pointer-events: none;
+            box-shadow: 0 20px 40px rgba(255,20,147,0.3);
+        }
+
+        #final-message.show {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            pointer-events: auto;
+        }
+
+        #final-message h1 {
+            font-family: 'Dancing Script', cursive;
+            color: #ff69b4;
+            font-size: 3.2rem;
+            margin-bottom: 15px;
+            text-shadow: 0 0 12px #ff1493;
+            letter-spacing: 2px;
+        }
+
+        #final-message p {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: #fff9f0;
+            text-shadow: 0 0 6px #ff69b4;
+            font-weight: 400;
+        }
+        
+        /* تحسين للهواتف */
+        @media (max-width: 600px) {
+            .content {
+                font-size: 2.2rem;
+                white-space: nowrap;
+                letter-spacing: 2px;
+            }
+            #final-message {
+                width: 90%;
+                padding: 25px 18px;
+            }
+            #final-message h1 {
+                font-size: 2.4rem;
+            }
+            #final-message p {
+                font-size: 1rem;
+            }
+        }
+        
+        /* عنصر تحكم موسيقي بسيط اختياري (خفيف) */
+        .music-hint {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            z-index: 30;
+            background: rgba(0,0,0,0.5);
+            border-radius: 40px;
+            padding: 5px 12px;
+            font-size: 12px;
+            color: #ff99bb;
+            font-family: monospace;
+            backdrop-filter: blur(4px);
+            pointer-events: none;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- عنصر الصوت: سوف يتم تعيين مسار ملف MP3 الصحيح. يفضل أن يكون الملف موجوداً بنفس المجلد -->
+    <audio id="bg-music" preload="auto" loop></audio>
+
+    <div id="start-screen" onclick="startExperience()">
+        <button class="tap-btn">✨ Tap to Open ✨</button>
+    </div>
+
+    <canvas id="matrix"></canvas>
+
+    <div class="content" id="text-display"></div>
+
+    <div id="final-message">
+        <h1>🎂 Happy Birthday 🎂</h1>
+        <p>
+            To the most amazing person, <strong>RAZAN</strong>.<br><br>
+            May your day be as beautiful as your smile, and your year as wonderful as your heart. Keep shining and never stop being the incredible person you are.
+            <br><br>Wishing you endless joy and happiness today and always! ❤️
+        </p>
+    </div>
+    <div class="music-hint">🎵 Music playing</div>
+
+    <script>
+        (function() {
+            // ---- عناصر DOM ----
+            const canvas = document.getElementById('matrix');
+            const ctx = canvas.getContext('2d');
+            const textElement = document.getElementById('text-display');
+            const finalMessage = document.getElementById('final-message');
+            const music = document.getElementById('bg-music');
+            const startScreen = document.getElementById('start-screen');
+            
+            // متغيرات للتحكم
+            let matrixInterval = null;
+            let heartInterval = null;
+            let finalCelebrationInterval = null;
+            let animationFrameId = null;    // لمصفوفة الـ matrix animationFrame بدلاً من setInterval لتحسين الأداء
+            let drops = [];
+            let canvasWidth = window.innerWidth;
+            let canvasHeight = window.innerHeight;
+            let fontSize = 18;
+            
+            // ---- تحميل موسيقى الملف الذي سيضعه المستخدم ----
+            // هام: يجب أن يكون الملف "song.mp3" موجوداً في نفس المسار.
+            // تم ضبط المسار مسبقاً كـ "song.mp3". يمكن تغييره حسب رغبتك.
+            // للتأكد من أن الموسيقى ستعمل فور بدء التجربة نضع المصدر.
+            // إضافة fallback تحذيري ولكن لا يؤثر على الأداء.
+            music.src = "song.mp3";
+            music.load();  // تحميل الملف بشكل مسبق (لن يعمل حتى start بسبب قيود المتصفح)
+            
+            // دالة إعادة ضبط حجم الكانفاس
+            function resizeCanvas() {
+                canvasWidth = window.innerWidth;
+                canvasHeight = window.innerHeight;
+                canvas.width = canvasWidth;
+                canvas.height = canvasHeight;
+                if (drops.length === 0) {
+                    const columns = Math.ceil(canvasWidth / fontSize);
+                    drops = Array(columns).fill(1);
+                } else {
+                    // تعديل الأعمدة إذا تغير الحجم
+                    const newColumns = Math.ceil(canvasWidth / fontSize);
+                    if (newColumns !== drops.length) {
+                        if (newColumns > drops.length) {
+                            for (let i = drops.length; i < newColumns; i++) drops.push(1);
+                        } else {
+                            drops = drops.slice(0, newColumns);
+                        }
+                    }
+                }
+            }
+            
+            // إعدادات الماتريكس الرقمية الوردية (سقوط الحروف)
+            function startMatrixRain() {
+                if (matrixInterval) clearInterval(matrixInterval);
+                if (animationFrameId) cancelAnimationFrame(animationFrameId);
+                
+                const alphabet = "01RAZAN❤✨!@#$%&*ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+                const columns = Math.ceil(canvasWidth / fontSize);
+                if (drops.length === 0) drops = Array(columns).fill(1);
+                
+                function drawMatrix() {
+                    if (!ctx) return;
+                    ctx.fillStyle = "rgba(0, 0, 0, 0.08)";
+                    ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+                    ctx.fillStyle = "#ff3399";
+                    ctx.font = `${fontSize}px "Courier New", monospace`;
+                    ctx.shadowBlur = 0;
+                    
+                    for (let i = 0; i < drops.length; i++) {
+                        // اختيار حرف عشوائي
+                        const randomChar = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+                        const x = i * fontSize;
+                        const y = drops[i] * fontSize;
+                        if (y < canvasHeight && x < canvasWidth) {
+                            // لون متدرج بين الوردي الفاتح والغامق
+                            const gradient = ctx.createLinearGradient(x, y - fontSize, x, y);
+                            gradient.addColorStop(0, "#ff66b2");
+                            gradient.addColorStop(1, "#ff1493");
+                            ctx.fillStyle = gradient;
+                            ctx.fillText(randomChar, x, y);
+                        }
+                        // تحديث السقوط
+                        if (y > canvasHeight && Math.random() > 0.975) {
+                            drops[i] = 0;
+                        }
+                        drops[i]++;
+                    }
+                    animationFrameId = requestAnimationFrame(drawMatrix);
+                }
+                
+                animationFrameId = requestAnimationFrame(drawMatrix);
+            }
+            
+            // دالة إنشاء القلوب المتساقطة
+            function createHeart(density = 1) {
+                for(let i = 0; i < density; i++) {
+                    const heart = document.createElement('div');
+                    heart.classList.add('heart');
+                    heart.innerHTML = '❤️';
+                    heart.style.left = Math.random() * 100 + 'vw';
+                    const size = 16 + Math.random() * 18;
+                    heart.style.fontSize = size + 'px';
+                    heart.style.animationDuration = Math.random() * 3 + 2.5 + 's';
+                    heart.style.opacity = 0.5 + Math.random() * 0.5;
+                    heart.style.filter = 'drop-shadow(0 0 4px #ff69b4)';
+                    document.body.appendChild(heart);
+                    setTimeout(() => heart.remove(), 5500);
+                }
+            }
+            
+            // بدء سقوط القلوب بشكل دوري
+            function startHeartRain() {
+                if (heartInterval) clearInterval(heartInterval);
+                heartInterval = setInterval(() => createHeart(2), 220);
+            }
+            
+            // نهاية الإحتفال بغزارة قلوب
+            function startFinalHearts() {
+                if (finalCelebrationInterval) clearInterval(finalCelebrationInterval);
+                finalCelebrationInterval = setInterval(() => createHeart(5), 150);
+                // بعد 12 ثانية نهدئ قليلاً لكن نبقي قلوب خفيفة
+                setTimeout(() => {
+                    if (finalCelebrationInterval) {
+                        clearInterval(finalCelebrationInterval);
+                        setInterval(() => createHeart(2), 400);
+                    }
+                }, 12000);
+            }
+            
+            // تسلسل الكلمات الرائع (توقيت دقيق مع الموسيقى)
+            const timeline = [
+                { time: 800, text: "3" },
+                { time: 2100, text: "2" },
+                { time: 3500, text: "1" },
+                { time: 5400, text: "HAPPY" },
+                { time: 9200, text: "BIRTHDAY" },
+                { time: 13200, text: "TO" },
+                { time: 17200, text: "RAZAN" },
+                { time: 22200, text: "THE MOST" },
+                { time: 26200, text: "BEAUTIFUL" },
+                { time: 30200, text: "SOUL" },
+                { time: 34200, text: "I KNOW" },
+                { time: 39200, text: "LET'S" },
+                { time: 43200, text: "CELEBRATE" },
+                { time: 47200, text: "YOU!" },
+                { time: 52000, text: "RAZAN ❤️" },
+                { time: 57000, text: "" }   // تفريغ النص قبل الرسالة النهائية
+            ];
+            
+            let activeTimeouts = [];
+            
+            // تشغيل عرض النصوص
+            function runTextSequence() {
+                // مسح أي تايماوت سابقة لضمان عدم التداخل
+                activeTimeouts.forEach(t => clearTimeout(t));
+                activeTimeouts = [];
+                // إخفاء النص أولاً
+                textElement.classList.remove('show');
+                textElement.innerText = "";
+                
+                timeline.forEach(step => {
+                    const timeoutId = setTimeout(() => {
+                        textElement.classList.remove('show');
+                        // بعد إزالة الفئة نغير النص ونعيد الظهور
+                        setTimeout(() => {
+                            if (step.text === "") {
+                                textElement.classList.remove('show');
+                                textElement.innerText = "";
+                            } else {
+                                textElement.innerText = step.text;
+                                textElement.classList.add('show');
+                            }
+                        }, 80); // تأليف بسيط لجعل الانتقال انسيابي
+                    }, step.time);
+                    activeTimeouts.push(timeoutId);
+                });
+                
+                // بعد 60 ثانية بالضبط تظهر الرسالة النهائية (بعد بدء التجربة)
+                const finalTimeout = setTimeout(() => {
+                    finalMessage.classList.add('show');
+                    // إيقاف القلوب المعتادة وبدء احتفال نهائي
+                    if (heartInterval) clearInterval(heartInterval);
+                    startFinalHearts();
+                }, 60000);
+                activeTimeouts.push(finalTimeout);
+            }
+            
+            // وظيفة بدء كل شيء (يتم استدعاؤها عند النقر على شاشة البداية)
+            window.startExperience = function() {
+                // منع النقر المتكرر
+                if (startScreen.getAttribute('data-started') === 'true') return;
+                startScreen.setAttribute('data-started', 'true');
+                
+                // تأثير اختفاء الشاشة
+                startScreen.style.opacity = "0";
+                setTimeout(() => {
+                    startScreen.style.display = "none";
+                }, 1000);
+                
+                // ----- تشغيل الموسيقى (الأهم) -----
+                // نضمن تشغيل الصوت باستخدام Promise ومعالجة أي أخطاء
+                music.volume = 0.75;   // صوت واضح ولكن غير مرتفع جداً
+                music.loop = true;
+                music.play().then(() => {
+                    console.log("✅ Music is playing: song.mp3");
+                }).catch(err => {
+                    console.warn("⚠️ Auto-play was blocked? but user already interacted. Trying again.", err);
+                    // في حال وجود خطأ نعيد المحاولة لأن المستخدم نقر بالفعل
+                    music.play().catch(e => console.error("Music error even after click:", e));
+                });
+                
+                // تهيئة المطر الرقمي
+                resizeCanvas();
+                startMatrixRain();
+                
+                // بدء سقوط القلوب الجميل
+                startHeartRain();
+                
+                // بدء سلسلة النصوص
+                runTextSequence();
+                
+                // مراقبة تغيير حجم النافذة لإعادة ضبط المصفوفة
+                window.addEventListener('resize', () => {
+                    resizeCanvas();
+                    // إعادة تحديث قطرات المطر في الخلفية تلقائياً
+                });
+            };
+            
+            // في حالة إذا تغير الحجم أثناء التشغيل بالفعل
+            window.addEventListener('resize', () => {
+                if (startScreen.style.display === 'none') {
+                    resizeCanvas();
+                }
+            });
+            
+            // بداية: نجعل canvas جاهزاً للخلفية السوداء الساكنة حتى لا تكون فارغة
+            function initBackgroundCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+                ctx.fillStyle = "#000";
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = "#ff1493";
+                ctx.font = "16px monospace";
+            }
+            initBackgroundCanvas();
+            
+            // عند تغيير الاتجاه نتأكد
+            window.addEventListener('orientationchange', () => {
+                setTimeout(() => {
+                    if (startScreen.style.display === 'none') {
+                        resizeCanvas();
+                    } else {
+                        initBackgroundCanvas();
+                    }
+                }, 50);
+            });
+        })();
+    </script>
+</body>
+</html>
