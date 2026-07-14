@@ -3276,4 +3276,948 @@
     <!-- ===== WHATSAPP FLOAT ===== -->
     <a href="https://wa.me/971569623792?text=مرحباً%20أحمد،%20أنا%20مهتم%20بالاستثمار%20العقاري%20في%20دبي" target="_blank" class="whatsapp-float" id="waFloat" aria-label="WhatsApp">
         <div class="pulse"></div>
-        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16.6 29c-2.3 0-4.6-.6-6.6-1.7L4 29l1.8-5.8c-1.3-2.1-2-4.5-2-7 0-7.3 6-13.2 13.3-13.2 3.5 0 6.9 1.4 9.4 3.9 2.5 2.5 3.9 5.8 3.9 9.3 0 7.3-6 13.2-13.3 13.2z" fill="#25d366"/><path d="M16.6 4.7C9.9 4.7 4.5 10 4.5 16.7c0 2.2.6 4.3 1.7 6.1l-1.2 3.8 3.9-1.2c1.8 1 3.8 1.6 5.9 1.6 6.7 0 12.1-5.4 12.1-12.1 0-3.2-1.3-6.2-3.5-8.5-2.3-2.2-5.3-3.5-8.6-3.5zm0 21.6c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4 1.2 1.1-3.9-.3-.4c-1.1-1.7-1.7-3.6-1.7-
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16.6 29c-2.3 0-4.6-.6-6.6-1.7L4 29l1.8-5.8c-1.3-2.1-2-4.5-2-7 0-7.3 6-13.2 13.3-13.2 3.5 0 6.9 1.4 9.4 3.9 2.5 2.5 3.9 5.8 3.9 9.3 0 7.3-6 13.2-13.3 13.2z" fill="#25d366"/><path d="M16.6 4.7C9.9 4.7 4.5 10 4.5 16.7c0 2.2.6 4.3 1.7 6.1l-1.2 3.8 3.9-1.2c1.8 1 3.8 1.6 5.9 1.6 6.7 0 12.1-5.4 12.1-12.1 0-3.2-1.3-6.2-3.5-8.5-2.3-2.2-5.3-3.5-8.6-3.5zm0 21.6c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4 1.2 1.1-3.9-.3-.4c-1.1-1.7-1.7-3.6-1.7-5.7 0-5.8 4.7-10.5 10.5-10.5 2.8 0 5.4 1.1 7.4 3.1 2 2 3.1 4.6 3.1 7.4 0 5.8-4.7 10.5-10.5 10.5zm5.8-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-.1 1.2.2.3.4.4.7.4.3 0 .7-.1 1.4-.4 1.5-.7 2.6-1.5 3-2.3.4-.8.4-1.5.3-1.6-.1-.2-.3-.3-.6-.5z" fill="#fff"/></svg>
+    </a>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <button id="back-top" aria-label="Back to top">↑</button>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        (function() {
+            'use strict';
+
+            // ===== LOADER =====
+            window.addEventListener('load', function() {
+                const loader = document.getElementById('loader');
+                setTimeout(function() {
+                    loader.classList.add('hidden-loader');
+                    setTimeout(function() {
+                        loader.style.display = 'none';
+                    }, 800);
+                }, 600);
+            });
+
+            // ===== CURSOR GLOW =====
+            const cursorGlow = document.getElementById('cursor-glow');
+            let cursorActive = false;
+            document.addEventListener('mousemove', function(e) {
+                if (!cursorActive) {
+                    cursorGlow.classList.add('active');
+                    cursorActive = true;
+                }
+                cursorGlow.style.left = e.clientX + 'px';
+                cursorGlow.style.top = e.clientY + 'px';
+            });
+            document.addEventListener('mouseleave', function() {
+                cursorGlow.classList.remove('active');
+                cursorActive = false;
+            });
+
+            // ===== SCROLL PROGRESS =====
+            const scrollProgress = document.getElementById('scroll-progress');
+            window.addEventListener('scroll', function() {
+                const scrollTop = window.scrollY;
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const progress = (scrollTop / docHeight) * 100;
+                scrollProgress.style.width = progress + '%';
+                scrollProgress.setAttribute('aria-valuenow', Math.round(progress));
+
+                // Back to top visibility
+                const backTop = document.getElementById('back-top');
+                if (scrollTop > 400) {
+                    backTop.classList.add('visible');
+                } else {
+                    backTop.classList.remove('visible');
+                }
+            });
+
+            // ===== BACK TO TOP =====
+            document.getElementById('back-top').addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // ===== NAVBAR SCROLL =====
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 60) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // ===== HAMBURGER =====
+            const hamburger = document.getElementById('hamburger');
+            const mobileMenu = document.getElementById('mobileMenu');
+            hamburger.addEventListener('click', function() {
+                this.classList.toggle('active');
+                const isOpen = this.classList.contains('active');
+                mobileMenu.classList.toggle('open');
+                this.setAttribute('aria-expanded', isOpen);
+            });
+
+            // ===== MOBILE MENU LINKS =====
+            document.querySelectorAll('.mobile-menu a').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    hamburger.classList.remove('active');
+                    mobileMenu.classList.remove('open');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                });
+            });
+
+            // ===== NAV LINKS ACTIVE =====
+            const navLinks = document.querySelectorAll('.nav-links a, .mobile-menu a');
+            navLinks.forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    navLinks.forEach(function(l) { l.classList.remove('active'); });
+                    this.classList.add('active');
+                });
+            });
+
+            // ===== THEME TOGGLE =====
+            const themeToggle = document.getElementById('themeToggle');
+            let isDark = true;
+            themeToggle.addEventListener('click', function() {
+                isDark = !isDark;
+                document.body.classList.toggle('light-mode', !isDark);
+                this.textContent = isDark ? '🌙' : '☀️';
+            });
+
+            // ===== LANGUAGE TOGGLE =====
+            const langToggle = document.getElementById('langToggle');
+            let currentLang = 'ar';
+            const translations = {
+                ar: {
+                    logoText: 'أحمد خلف الله',
+                    langToggle: 'English',
+                    navHome: 'الرئيسية',
+                    navProjects: 'مشاريع',
+                    navDevelopers: 'مطورين',
+                    navWhy: 'لماذا أحمد',
+                    navTestimonials: 'آراء العملاء',
+                    navContact: 'اتصل بي',
+                    heroBadge: '✦ دبي العقارية ✦',
+                    heroTitle1: 'مستشارك',
+                    heroTitle2: 'العقاري الموثوق',
+                    heroTitle3: 'في دبي',
+                    heroDesc: 'أساعدك في العثور على عقار أحلامك أو أفضل فرصة استثمارية في سوق دبي العقاري بأعلى عائد استثماري، بخبرة واحترافية تامة.',
+                    heroBtnWhatsapp: '📱 تواصل واتساب',
+                    heroBtnConsult: '📋 استشارة مجانية',
+                    statProjects: 'مشروع عقاري',
+                    statInvestors: 'مستثمر سعيد',
+                    statYears: 'سنوات خبرة',
+                    statSales: 'مليار درهم مبيعات',
+                    statROI: 'متوسط العائد',
+                    scrollText: 'تمرير',
+                    projectsTitle: 'أبرز المشاريع',
+                    projectsSub: 'اختر من بين أفضل المشاريع العقارية في دبي من نخبة المطورين',
+                    projectBtn: 'استفسر الآن',
+                    developersTitle: 'أكبر المطورين',
+                    developersSub: 'نعمل مع نخبة المطورين العقاريين في دبي لتقديم أفضل الفرص الاستثمارية',
+                    whyTitle: 'لماذا أحمد خلف الله',
+                    whySub: 'خبرة واحترافية في سوق دبي العقاري لضمان أفضل عائد على استثمارك',
+                    why1Title: 'خبرة 12+ سنة',
+                    why1Desc: 'خبرة عميقة في سوق دبي العقاري مع فهم دقيق لاتجاهات السوق وأفضل الفرص الاستثمارية.',
+                    why2Title: 'شبكة علاقات قوية',
+                    why2Desc: 'علاقات مباشرة مع كبار المطورين العقاريين في دبي، مما يضمن لك أفضل الأسعار والوحدات.',
+                    why3Title: 'تحليل استثماري دقيق',
+                    why3Desc: 'تحليل شامل للسوق والعائد الاستثماري لضمان تحقيق أعلى عائد على استثمارك العقاري.',
+                    why4Title: 'خدمة شاملة',
+                    why4Desc: 'من البحث عن العقار إلى إتمام الصفقة وإدارة المحفظة، نقدم لك خدمة متكاملة ومتابعة مستمرة.',
+                    why5Title: 'استثمار عالمي',
+                    why5Desc: 'نساعد المستثمرين من جميع أنحاء العالم في الاستثمار في سوق دبي العقاري بكل سهولة وثقة.',
+                    why6Title: 'سمعة ممتازة',
+                    why6Desc: 'سمعة راسخة في السوق العقاري بدبي بفضل النزاهة والشفافية والالتزام بتقديم أفضل الخدمات لعملائنا.',
+                    investTitle: 'مزايا الاستثمار',
+                    investSub: 'دبي وجهة استثمارية عالمية تقدم مزايا فريدة للمستثمرين من جميع أنحاء العالم',
+                    invest1: 'ضريبة على الدخل',
+                    invest2: 'ملكية أجنبية',
+                    invest3: 'سنوات تأشيرة ذهبية',
+                    invest4: 'عائد استثماري سنوي',
+                    marketTitle: 'إحصائيات السوق',
+                    marketSub: 'نظرة على أداء سوق دبي العقاري وأبرز المؤشرات',
+                    marketGrowth: 'نمو قطاعات السوق',
+                    marketSeg1: 'الفلل',
+                    marketSeg2: 'الشقق',
+                    marketSeg3: 'التجاري',
+                    marketSeg4: 'الضيافة',
+                    marketSeg5: 'اللوجستي',
+                    marketPrices: 'متوسط الأسعار (مليون درهم)',
+                    marketPrice1: '2020',
+                    marketPrice2: '2021',
+                    marketPrice3: '2022',
+                    marketPrice4: '2023',
+                    marketPrice5: '2024',
+                    propertyTitle: 'أنواع العقارات',
+                    propertySub: 'تشكيلة واسعة من العقارات تناسب جميع الاحتياجات والميزانيات',
+                    prop1: 'فلل',
+                    prop1Desc: 'فلل فاخرة في أفضل المجتمعات',
+                    prop2: 'شقق',
+                    prop2Desc: 'شقق عصرية في مواقع مميزة',
+                    prop3: 'شاطئية',
+                    prop3Desc: 'عقارات مطلة على البحر',
+                    prop4: 'Off Plan',
+                    prop4Desc: 'أفضل فرص الاستثمار المبكر',
+                    calcTitle: 'حاسبات عقارية',
+                    calcSub: 'احسب العائد المتوقع أو قيمة القرض العقاري بسهولة',
+                    calcROITitle: '💰 حاسبة العائد الاستثماري (ROI)',
+                    calcROISub: 'قدّر العائد السنوي المتوقع من استثمارك العقاري',
+                    calcROIProp: 'سعر العقار (درهم)',
+                    calcROIRent: 'الإيجار السنوي (درهم)',
+                    calcBtn: 'احسب',
+                    calcROIResult: 'العائد السنوي المتوقع',
+                    calcMortTitle: '🏦 حاسبة التمويل العقاري',
+                    calcMortSub: 'احسب القسط الشهري المتوقع للتمويل العقاري',
+                    calcMortProp: 'سعر العقار (درهم)',
+                    calcMortDown: 'الدفعة المقدمة (درهم)',
+                    calcMortRate: 'نسبة الفائدة السنوية (%)',
+                    calcMortTerm: 'مدة التمويل (سنوات)',
+                    calcMortResult: 'القسط الشهري المتوقع',
+                    testTitle: 'آراء العملاء',
+                    testSub: 'ما يقوله عملاؤنا عن تجربتهم مع أحمد خلف الله',
+                    test1: '"أحمد كان معي خطوة بخطوة في أول استثمار عقاري لي في دبي. بفضل خبرته، حصلت على عائد ممتاز وصفقة رائعة."',
+                    test1Role: 'مستثمر من الإمارات',
+                    test2: '"تعاملت مع أحمد لشراء فيلا في دبي هيلز. كان محترفاً جداً وساعدني في الحصول على أفضل سعر وشروط ميسرة."',
+                    test2Role: 'مالكة عقار',
+                    test3: '"بفضل نصائح أحمد الاستثمارية، تمكنت من بناء محفظة عقارية قوية في دبي خلال ثلاث سنوات فقط. أنصح به بشدة."',
+                    test3Role: 'مستثمر ومطور',
+                    test4: '"أحمد خلف الله هو المستشار العقاري الذي تثق به. شفاف، محترف، ودائماً يضع مصلحة العميل أولاً."',
+                    test4Role: 'مستثمرة من الكويت',
+                    test5: '"عملت مع أحمد لشراء شقة في داون تاون. كانت تجربة سلسة ومريحة بفضل متابعته المستمرة ودقته في التفاصيل."',
+                    test5Role: 'رجل أعمال',
+                    test6: '"أحمد ساعدني في الحصول على التأشيرة الذهبية من خلال الاستثمار العقاري. كان داعماً طوال الرحلة."',
+                    test6Role: 'مستثمرة من مصر',
+                    timelineTitle: 'رحلتك الاستثمارية',
+                    timelineSub: 'خطوات بسيطة للاستثمار في دبي مع أحمد خلف الله',
+                    step1Num: 'الخطوة 01',
+                    step1Title: 'استشارة مجانية',
+                    step1Desc: 'نبدأ بجلسة استشارية لفهم أهدافك الاستثمارية وميزانيتك واحتياجاتك.',
+                    step2Num: 'الخطوة 02',
+                    step2Title: 'البحث والتحليل',
+                    step2Desc: 'نقوم بتحليل السوق واختيار أفضل الخيارات التي تتوافق مع أهدافك الاستثمارية.',
+                    step3Num: 'الخطوة 03',
+                    step3Title: 'جولة عقارية',
+                    step3Desc: 'نرتب جولات عقارية لمشاهدة العقارات المختارة وتقييمها بشكل مباشر.',
+                    step4Num: 'الخطوة 04',
+                    step4Title: 'التفاوض والإتمام',
+                    step4Desc: 'نقوم بالتفاوض على أفضل سعر وشروط، ثم إتمام عملية الشراء بكل احترافية.',
+                    step5Num: 'الخطوة 05',
+                    step5Title: 'إدارة المحفظة',
+                    step5Desc: 'نواصل دعمك بإدارة المحفظة العقارية ومتابعة العائد الاستثماري والفرص المستقبلية.',
+                    faqTitle: 'الأسئلة الشائعة',
+                    faqSub: 'إجابات على أكثر الأسئلة التي يطرحها المستثمرون',
+                    faq1Q: 'ما هي خطوات شراء عقار في دبي للمستثمرين الأجانب؟',
+                    faq1A: 'يمكن للمستثمرين الأجانب شراء العقارات في مناطق معينة من دبي. تشمل الخطوات: اختيار العقار، توقيع عقد البيع، دفع الدفعة المقدمة، تسجيل العقار في دائرة الأراضي والأملاك، واستلام المفتاح. نقدم لك الدعم الكامل في كل خطوة.',
+                    faq2Q: 'ما هي مزايا الاستثمار في دبي؟',
+                    faq2A: 'دبي تقدم مزايا عديدة للمستثمرين، منها: إعفاء من ضريبة الدخل، ملكية أجنبية كاملة في بعض المناطق، تأشيرة ذهبية للمستثمرين، بنية تحتية عالمية، وأسواق عقارية تنمو باستمرار.',
+                    faq3Q: 'كيف أحصل على التأشيرة الذهبية من خلال الاستثمار العقاري؟',
+                    faq3A: 'يمكنك الحصول على التأشيرة الذهبية عند شراء عقار بقيمة لا تقل عن 2 مليون درهم إماراتي. نساعدك في تحديد العقارات المؤهلة والتقديم على التأشيرة.',
+                    faq4Q: 'ما هي أفضل المناطق للاستثمار العقاري في دبي؟',
+                    faq4A: 'أفضل المناطق تعتمد على أهدافك الاستثمارية. من أبرز المناطق: Downtown Dubai، Dubai Marina، Palm Jumeirah، Dubai Hills Estate، وBusiness Bay. نقدم لك تحليلاً مفصلاً لاختيار الأنسب لك.',
+                    faq5Q: 'ما هي تكاليف شراء العقار في دبي؟',
+                    faq5A: 'بالإضافة إلى سعر العقار، تشمل التكاليف: رسوم التسجيل في دائرة الأراضي (حوالي 4%)، رسوم الوساطة، رسوم التقييم، ورسوم الصيانة. نوفر لك تفصيلاً كاملاً للتكاليف قبل الشراء.',
+                    contactTitle: 'تواصل معي',
+                    contactSub: 'احجز استشارتك المجانية اليوم وابدأ رحلتك الاستثمارية في دبي',
+                    contactName: 'الاسم الكامل',
+                    contactEmail: 'البريد الإلكتروني',
+                    contactPhone: 'رقم الهاتف',
+                    contactSubject: 'الموضوع',
+                    contactSubInvest: 'استثمار عقاري',
+                    contactSubBuy: 'شراء عقار',
+                    contactSubConsult: 'استشارة',
+                    contactSubOther: 'أخرى',
+                    contactMessage: 'الرسالة',
+                    contactSend: 'إرسال الرسالة',
+                    contactInfoTitle: 'معلومات الاتصال',
+                    contactPhoneLabel: 'هاتف',
+                    contactEmailLabel: 'بريد إلكتروني',
+                    contactAddressLabel: 'العنوان',
+                    contactHoursLabel: 'ساعات العمل',
+                    contactBtnBack: 'العودة للرئيسية',
+                    mapText: '📍 دبي - الإمارات العربية المتحدة',
+                    footerDesc: 'مستشار عقاري فاخر في دبي، نقدم خدمات استشارية متكاملة للمستثمرين من جميع أنحاء العالم.',
+                    footerNav: 'روابط سريعة',
+                    footerServices: 'الخدمات',
+                    footerSrv1: 'استشارات استثمارية',
+                    footerSrv2: 'شراء العقارات',
+                    footerSrv3: 'إدارة المحافظ',
+                    footerSrv4: 'خدمات التأشيرة الذهبية',
+                    footerSrv5: 'تحليل السوق',
+                    footerContact: 'اتصل بنا',
+                    footerAddress: '📍 دبي، الإمارات العربية المتحدة',
+                    footerCopy: '© 2026 أحمد خلف الله. جميع الحقوق محفوظة.'
+                },
+                en: {
+                    logoText: 'Ahmed Khalafalla',
+                    langToggle: 'العربية',
+                    navHome: 'Home',
+                    navProjects: 'Projects',
+                    navDevelopers: 'Developers',
+                    navWhy: 'Why Ahmed',
+                    navTestimonials: 'Testimonials',
+                    navContact: 'Contact',
+                    heroBadge: '✦ Dubai Real Estate ✦',
+                    heroTitle1: 'Your Trusted',
+                    heroTitle2: 'Real Estate Advisor',
+                    heroTitle3: 'in Dubai',
+                    heroDesc: 'I help you find your dream home or the best investment opportunity in Dubai\'s real estate market with the highest ROI, backed by expertise and professionalism.',
+                    heroBtnWhatsapp: '📱 WhatsApp',
+                    heroBtnConsult: '📋 Free Consultation',
+                    statProjects: 'Projects',
+                    statInvestors: 'Happy Investors',
+                    statYears: 'Years Experience',
+                    statSales: 'Billion AED Sales',
+                    statROI: 'Avg. ROI',
+                    scrollText: 'Scroll',
+                    projectsTitle: 'Featured Projects',
+                    projectsSub: 'Choose from the best real estate projects in Dubai from top developers',
+                    projectBtn: 'Inquire Now',
+                    developersTitle: 'Top Developers',
+                    developersSub: 'We work with the top real estate developers in Dubai to offer the best investment opportunities',
+                    whyTitle: 'Why Ahmed Khalafalla',
+                    whySub: 'Expertise and professionalism in Dubai\'s real estate market to ensure the best return on your investment',
+                    why1Title: '12+ Years Experience',
+                    why1Desc: 'Deep experience in Dubai\'s real estate market with a precise understanding of market trends and best investment opportunities.',
+                    why2Title: 'Strong Network',
+                    why2Desc: 'Direct relationships with top developers in Dubai, ensuring you get the best prices and units.',
+                    why3Title: 'Accurate Investment Analysis',
+                    why3Desc: 'Comprehensive market and ROI analysis to ensure the highest return on your real estate investment.',
+                    why4Title: 'Comprehensive Service',
+                    why4Desc: 'From property search to deal completion and portfolio management, we provide integrated service and continuous follow-up.',
+                    why5Title: 'Global Investment',
+                    why5Desc: 'We help investors from around the world invest in Dubai\'s real estate market with ease and confidence.',
+                    why6Title: 'Excellent Reputation',
+                    why6Desc: 'A well-established reputation in Dubai\'s real estate market thanks to integrity, transparency, and commitment to excellence.',
+                    investTitle: 'Investment Advantages',
+                    investSub: 'Dubai is a global investment destination offering unique advantages for investors from around the world',
+                    invest1: 'Income Tax',
+                    invest2: 'Foreign Ownership',
+                    invest3: 'Golden Visa Years',
+                    invest4: 'Annual ROI',
+                    marketTitle: 'Market Statistics',
+                    marketSub: 'A look at Dubai\'s real estate market performance and key indicators',
+                    marketGrowth: 'Market Sector Growth',
+                    marketSeg1: 'Villas',
+                    marketSeg2: 'Apartments',
+                    marketSeg3: 'Commercial',
+                    marketSeg4: 'Hospitality',
+                    marketSeg5: 'Logistics',
+                    marketPrices: 'Average Prices (Million AED)',
+                    marketPrice1: '2020',
+                    marketPrice2: '2021',
+                    marketPrice3: '2022',
+                    marketPrice4: '2023',
+                    marketPrice5: '2024',
+                    propertyTitle: 'Property Types',
+                    propertySub: 'A wide range of properties to suit all needs and budgets',
+                    prop1: 'Villas',
+                    prop1Desc: 'Luxury villas in the best communities',
+                    prop2: 'Apartments',
+                    prop2Desc: 'Modern apartments in prime locations',
+                    prop3: 'Beachfront',
+                    prop3Desc: 'Properties with sea views',
+                    prop4: 'Off Plan',
+                    prop4Desc: 'Best early investment opportunities',
+                    calcTitle: 'Real Estate Calculators',
+                    calcSub: 'Calculate expected returns or mortgage payments easily',
+                    calcROITitle: '💰 ROI Calculator',
+                    calcROISub: 'Estimate the expected annual return on your real estate investment',
+                    calcROIProp: 'Property Price (AED)',
+                    calcROIRent: 'Annual Rent (AED)',
+                    calcBtn: 'Calculate',
+                    calcROIResult: 'Expected Annual ROI',
+                    calcMortTitle: '🏦 Mortgage Calculator',
+                    calcMortSub: 'Calculate the expected monthly mortgage payment',
+                    calcMortProp: 'Property Price (AED)',
+                    calcMortDown: 'Down Payment (AED)',
+                    calcMortRate: 'Annual Interest Rate (%)',
+                    calcMortTerm: 'Loan Term (Years)',
+                    calcMortResult: 'Expected Monthly Payment',
+                    testTitle: 'Client Testimonials',
+                    testSub: 'What our clients say about their experience with Ahmed Khalafalla',
+                    test1: '"Ahmed guided me step by step through my first real estate investment in Dubai. Thanks to his expertise, I got an excellent return and a great deal."',
+                    test1Role: 'Investor from UAE',
+                    test2: '"I worked with Ahmed to buy a villa in Dubai Hills. He was very professional and helped me get the best price and favorable terms."',
+                    test2Role: 'Property Owner',
+                    test3: '"Thanks to Ahmed\'s investment advice, I was able to build a strong property portfolio in Dubai in just three years. Highly recommended."',
+                    test3Role: 'Investor & Developer',
+                    test4: '"Ahmed Khalafalla is the real estate consultant you can trust. Transparent, professional, and always puts the client\'s interest first."',
+                    test4Role: 'Investor from Kuwait',
+                    test5: '"I worked with Ahmed to buy an apartment in Downtown. It was a smooth and comfortable experience thanks to his continuous follow-up and attention to detail."',
+                    test5Role: 'Businessman',
+                    test6: '"Ahmed helped me get the golden visa through real estate investment. He was supportive throughout the journey."',
+                    test6Role: 'Investor from Egypt',
+                    timelineTitle: 'Your Investment Journey',
+                    timelineSub: 'Simple steps to invest in Dubai with Ahmed Khalafalla',
+                    step1Num: 'Step 01',
+                    step1Title: 'Free Consultation',
+                    step1Desc: 'We start with a consultation session to understand your investment goals, budget, and needs.',
+                    step2Num: 'Step 02',
+                    step2Title: 'Research & Analysis',
+                    step2Desc: 'We analyze the market and select the best options that align with your investment objectives.',
+                    step3Num: 'Step 03',
+                    step3Title: 'Property Tour',
+                    step3Desc: 'We arrange property tours to view and evaluate selected properties firsthand.',
+                    step4Num: 'Step 04',
+                    step4Title: 'Negotiation & Closing',
+                    step4Desc: 'We negotiate the best price and terms, then complete the purchase process professionally.',
+                    step5Num: 'Step 05',
+                    step5Title: 'Portfolio Management',
+                    step5Desc: 'We continue to support you with portfolio management, ROI tracking, and future opportunities.',
+                    faqTitle: 'Frequently Asked Questions',
+                    faqSub: 'Answers to the most common questions investors ask',
+                    faq1Q: 'What are the steps to buy property in Dubai for foreign investors?',
+                    faq1A: 'Foreign investors can buy properties in designated areas of Dubai. Steps include: selecting the property, signing the sales contract, paying the deposit, registering the property with the Dubai Land Department, and receiving the keys. We provide full support at every step.',
+                    faq2Q: 'What are the advantages of investing in Dubai?',
+                    faq2A: 'Dubai offers many advantages for investors, including: income tax exemption, full foreign ownership in some areas, golden visa for investors, world-class infrastructure, and growing real estate markets.',
+                    faq3Q: 'How can I get the golden visa through real estate investment?',
+                    faq3A: 'You can get the golden visa by purchasing a property worth at least 2 million AED. We help you identify eligible properties and apply for the visa.',
+                    faq4Q: 'What are the best areas for real estate investment in Dubai?',
+                    faq4A: 'The best areas depend on your investment goals. Top areas include: Downtown Dubai, Dubai Marina, Palm Jumeirah, Dubai Hills Estate, and Business Bay. We provide detailed analysis to help you choose the right one.',
+                    faq5Q: 'What are the costs of buying property in Dubai?',
+                    faq5A: 'In addition to the property price, costs include: registration fees at the Land Department (approximately 4%), agency fees, valuation fees, and maintenance fees. We provide a full cost breakdown before purchase.',
+                    contactTitle: 'Contact Me',
+                    contactSub: 'Book your free consultation today and start your investment journey in Dubai',
+                    contactName: 'Full Name',
+                    contactEmail: 'Email Address',
+                    contactPhone: 'Phone Number',
+                    contactSubject: 'Subject',
+                    contactSubInvest: 'Real Estate Investment',
+                    contactSubBuy: 'Property Purchase',
+                    contactSubConsult: 'Consultation',
+                    contactSubOther: 'Other',
+                    contactMessage: 'Message',
+                    contactSend: 'Send Message',
+                    contactInfoTitle: 'Contact Information',
+                    contactPhoneLabel: 'Phone',
+                    contactEmailLabel: 'Email',
+                    contactAddressLabel: 'Address',
+                    contactHoursLabel: 'Working Hours',
+                    contactBtnBack: 'Back to Home',
+                    mapText: '📍 Dubai - United Arab Emirates',
+                    footerDesc: 'Luxury real estate consultant in Dubai, providing comprehensive advisory services for investors from around the world.',
+                    footerNav: 'Quick Links',
+                    footerServices: 'Services',
+                    footerSrv1: 'Investment Consulting',
+                    footerSrv2: 'Property Purchasing',
+                    footerSrv3: 'Portfolio Management',
+                    footerSrv4: 'Golden Visa Services',
+                    footerSrv5: 'Market Analysis',
+                    footerContact: 'Contact Us',
+                    footerAddress: '📍 Dubai - United Arab Emirates',
+                    footerCopy: '© 2026 Ahmed Khalafalla. All rights reserved.'
+                }
+            };
+
+            function updateLanguage(lang) {
+                const t = translations[lang];
+                document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+                document.documentElement.lang = lang;
+                document.body.className = lang === 'ar' ? 'ar' : 'en';
+                document.body.style.fontFamily = lang === 'ar' ? 'var(--font-ar)' : 'var(--font-en)';
+
+                document.querySelectorAll('[data-i18n]').forEach(function(el) {
+                    const key = el.getAttribute('data-i18n');
+                    if (t[key] !== undefined) {
+                        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.tagName === 'SELECT') {
+                            el.placeholder = t[key];
+                        } else if (el.tagName === 'OPTION') {
+                            el.textContent = t[key];
+                        } else {
+                            el.textContent = t[key];
+                        }
+                    }
+                });
+
+                document.getElementById('logoText').textContent = t.logoText;
+                document.getElementById('langToggle').textContent = t.langToggle;
+
+                // Update WhatsApp links
+                const waLinks = document.querySelectorAll('a[href*="wa.me"]');
+                const waMsgAr =
+                'مرحباً%20أحمد،%20أنا%20مهتم%20بالاستثمار%20العقاري%20في%20دبي';
+                const waMsgEn = 'Hello%20Ahmed,%20I%20am%20interested%20in%20Dubai%20real%20estate';
+                const waMsg = lang === 'ar' ? waMsgAr : waMsgEn;
+                waLinks.forEach(function(link) {
+                    const base = link.href.split('?')[0];
+                    link.href = base + '?text=' + waMsg;
+                });
+
+                // Update contact subject options
+                document.querySelectorAll('#contactSubject option').forEach(function(opt) {
+                    const key = opt.getAttribute('data-i18n');
+                    if (key && t[key]) {
+                        opt.textContent = t[key];
+                    }
+                });
+
+                currentLang = lang;
+            }
+
+            langToggle.addEventListener('click', function() {
+                const newLang = currentLang === 'ar' ? 'en' : 'ar';
+                updateLanguage(newLang);
+            });
+
+            // ===== COUNTER ANIMATION =====
+            function animateCounters() {
+                const counters = document.querySelectorAll('.number[data-count]');
+                counters.forEach(function(counter) {
+                    const target = parseFloat(counter.getAttribute('data-count'));
+                    const suffix = counter.querySelector('.suffix') ? counter.querySelector('.suffix').textContent :
+                        '';
+                    const isFloat = target % 1 !== 0;
+                    const duration = 2000;
+                    const startTime = performance.now();
+
+                    function updateCounter(currentTime) {
+                        const elapsed = currentTime - startTime;
+                        const progress = Math.min(elapsed / duration, 1);
+                        const eased = 1 - Math.pow(1 - progress, 3);
+                        const current = eased * target;
+                        if (isFloat) {
+                            counter.textContent = current.toFixed(1) + suffix;
+                        } else {
+                            counter.textContent = Math.floor(current) + suffix;
+                        }
+                        if (progress < 1) {
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            counter.textContent = target + suffix;
+                        }
+                    }
+                    requestAnimationFrame(updateCounter);
+                });
+            }
+
+            // ===== REVEAL ON SCROLL =====
+            function revealOnScroll() {
+                const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+                const observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            // If it's a counter, animate it
+                            const counter = entry.target.querySelector('.number[data-count]');
+                            if (counter && !counter.dataset.animated) {
+                                counter.dataset.animated = 'true';
+                                const target = parseFloat(counter.getAttribute('data-count'));
+                                const suffix = counter.querySelector('.suffix') ? counter.querySelector('.suffix')
+                                    .textContent : '';
+                                const isFloat = target % 1 !== 0;
+                                const duration = 2000;
+                                const startTime = performance.now();
+
+                                function updateCounter(currentTime) {
+                                    const elapsed = currentTime - startTime;
+                                    const progress = Math.min(elapsed / duration, 1);
+                                    const eased = 1 - Math.pow(1 - progress, 3);
+                                    const current = eased * target;
+                                    if (isFloat) {
+                                        counter.textContent = current.toFixed(1) + suffix;
+                                    } else {
+                                        counter.textContent = Math.floor(current) + suffix;
+                                    }
+                                    if (progress < 1) {
+                                        requestAnimationFrame(updateCounter);
+                                    } else {
+                                        counter.textContent = target + suffix;
+                                    }
+                                }
+                                requestAnimationFrame(updateCounter);
+                            }
+                            // Animate bar fills
+                            const fills = entry.target.querySelectorAll('.fill[data-width]');
+                            fills.forEach(function(fill) {
+                                const width = fill.getAttribute('data-width');
+                                fill.style.width = width + '%';
+                            });
+                        }
+                    });
+                }, {
+                    threshold: 0.15,
+                    rootMargin: '0px 0px -40px 0px'
+                });
+                reveals.forEach(function(el) { observer.observe(el); });
+                // Also observe stats cards directly
+                document.querySelectorAll('.stat-card.reveal').forEach(function(el) {
+                    observer.observe(el);
+                });
+            }
+
+            // ===== TESTIMONIALS CAROUSEL =====
+            function initTestimonials() {
+                const track = document.getElementById('testTrack');
+                const cards = track.querySelectorAll('.testimonial-card');
+                const prevBtn = document.getElementById('testPrev');
+                const nextBtn = document.getElementById('testNext');
+                const dotsContainer = document.getElementById('testDots');
+                let currentIndex = 0;
+                let visibleCards = 3;
+                let totalCards = cards.length;
+                let autoSlide = true;
+                let autoInterval;
+
+                function getVisibleCount() {
+                    if (window.innerWidth < 768) return 1;
+                    if (window.innerWidth < 992) return 2;
+                    return 3;
+                }
+
+                function updateCarousel() {
+                    visibleCards = getVisibleCount();
+                    const cardWidth = cards[0].offsetWidth + 30; // width + gap
+                    const offset = currentIndex * cardWidth;
+                    track.style.transform = 'translateX(-' + offset + 'px)';
+                    updateDots();
+                }
+
+                function updateDots() {
+                    const total = Math.ceil(totalCards / visibleCards);
+                    dotsContainer.innerHTML = '';
+                    for (let i = 0; i < total; i++) {
+                        const dot = document.createElement('button');
+                        dot.className = 'dot' + (i === Math.floor(currentIndex / visibleCards) ? ' active' : '');
+                        dot.setAttribute('aria-label', 'Slide ' + (i + 1));
+                        dot.addEventListener('click', function() {
+                            currentIndex = i * visibleCards;
+                            if (currentIndex + visibleCards > totalCards) {
+                                currentIndex = totalCards - visibleCards;
+                            }
+                            if (currentIndex < 0) currentIndex = 0;
+                            updateCarousel();
+                            resetAutoSlide();
+                        });
+                        dotsContainer.appendChild(dot);
+                    }
+                }
+
+                function nextSlide() {
+                    const total = Math.ceil(totalCards / visibleCards);
+                    const maxIndex = totalCards - visibleCards;
+                    if (currentIndex + visibleCards >= totalCards) {
+                        currentIndex = 0;
+                    } else {
+                        currentIndex += visibleCards;
+                        if (currentIndex > maxIndex) currentIndex = maxIndex;
+                    }
+                    updateCarousel();
+                }
+
+                function prevSlide() {
+                    const total = Math.ceil(totalCards / visibleCards);
+                    if (currentIndex - visibleCards < 0) {
+                        currentIndex = totalCards - visibleCards;
+                        if (currentIndex < 0) currentIndex = 0;
+                    } else {
+                        currentIndex -= visibleCards;
+                    }
+                    updateCarousel();
+                }
+
+                function resetAutoSlide() {
+                    if (autoSlide) {
+                        clearInterval(autoInterval);
+                        autoInterval = setInterval(nextSlide, 5000);
+                    }
+                }
+
+                prevBtn.addEventListener('click', function() {
+                    prevSlide();
+                    resetAutoSlide();
+                });
+                nextBtn.addEventListener('click', function() {
+                    nextSlide();
+                    resetAutoSlide();
+                });
+
+                window.addEventListener('resize', function() {
+                    updateCarousel();
+                });
+
+                // Initialize
+                setTimeout(function() {
+                    updateCarousel();
+                    if (autoSlide) {
+                        autoInterval = setInterval(nextSlide, 5000);
+                    }
+                }, 300);
+
+                // Pause on hover
+                const carouselContainer = document.querySelector('.testimonials-carousel');
+                carouselContainer.addEventListener('mouseenter', function() {
+                    if (autoSlide) {
+                        clearInterval(autoInterval);
+                    }
+                });
+                carouselContainer.addEventListener('mouseleave', function() {
+                    if (autoSlide) {
+                        autoInterval = setInterval(nextSlide, 5000);
+                    }
+                });
+            }
+
+            // ===== FAQ =====
+            function initFAQ() {
+                const faqItems = document.querySelectorAll('.faq-item');
+                faqItems.forEach(function(item) {
+                    const question = item.querySelector('.question');
+                    const answer = item.querySelector('.answer');
+                    const icon = question.querySelector('.icon');
+                    question.addEventListener('click', function() {
+                        const isOpen = answer.classList.contains('open');
+                        // Close all
+                        faqItems.forEach(function(other) {
+                            other.querySelector('.answer').classList.remove('open');
+                            other.querySelector('.question .icon').classList.remove('open');
+                        });
+                        if (!isOpen) {
+                            answer.classList.add('open');
+                            icon.classList.add('open');
+                        }
+                    });
+                });
+                // Open first by default
+                if (faqItems.length > 0) {
+                    const first = faqItems[0];
+                    first.querySelector('.answer').classList.add('open');
+                    first.querySelector('.question .icon').classList.add('open');
+                }
+            }
+
+            // ===== CALCULATORS =====
+            function initCalculators() {
+                // ROI
+                document.getElementById('calcROI').addEventListener('click', function() {
+                    const price = parseFloat(document.getElementById('roiPrice').value) || 0;
+                    const rent = parseFloat(document.getElementById('roiRent').value) || 0;
+                    if (price > 0 && rent > 0) {
+                        const roi = (rent / price) * 100;
+                        document.getElementById('roiValue').textContent = roi.toFixed(2) + '%';
+                    } else {
+                        document.getElementById('roiValue').textContent = '—';
+                    }
+                });
+
+                // Mortgage
+                document.getElementById('calcMort').addEventListener('click', function() {
+                    const price = parseFloat(document.getElementById('mortPrice').value) || 0;
+                    const down = parseFloat(document.getElementById('mortDown').value) || 0;
+                    const rate = parseFloat(document.getElementById('mortRate').value) || 0;
+                    const term = parseFloat(document.getElementById('mortTerm').value) || 0;
+                    const principal = price - down;
+                    if (principal > 0 && rate > 0 && term > 0) {
+                        const monthlyRate = rate / 100 / 12;
+                        const months = term * 12;
+                        const payment = principal * monthlyRate * Math.pow(1 + monthlyRate, months) / (Math.pow(1 +
+                            monthlyRate, months) - 1);
+                        document.getElementById('mortValue').textContent = 'AED ' + payment.toLocaleString(
+                        'en-US', { maximumFractionDigits: 0 });
+                    } else {
+                        document.getElementById('mortValue').textContent = '—';
+                    }
+                });
+            }
+
+            // ===== CONTACT FORM =====
+            function initContactForm() {
+                const form = document.getElementById('contactForm');
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const name = document.getElementById('contactName').value.trim();
+                    const email = document.getElementById('contactEmail').value.trim();
+                    const message = document.getElementById('contactMessage').value.trim();
+                    if (name && email && message) {
+                        alert(currentLang === 'ar' ?
+                            '✅ تم استلام رسالتك! سأتصل بك قريباً.' :
+                            '✅ Your message has been received! I will contact you shortly.'
+                        );
+                        form.reset();
+                    } else {
+                        alert(currentLang === 'ar' ?
+                            '❌ يرجى ملء جميع الحقول المطلوبة.' :
+                            '❌ Please fill in all required fields.'
+                        );
+                    }
+                });
+            }
+
+            // ===== PARTICLES =====
+            function initParticles() {
+                const container = document.getElementById('particles');
+                if (!container) return;
+                const count = 40;
+                for (let i = 0; i < count; i++) {
+                    const particle = document.createElement('span');
+                    const size = Math.random() * 4 + 1;
+                    particle.style.cssText =
+                        `
+                            position: absolute;
+                            width: ${size}px;
+                            height: ${size}px;
+                            background: rgba(212,175,55,${Math.random() * 0.3 + 0.1});
+                            border-radius: 50%;
+                            top: ${Math.random() * 100}%;
+                            left: ${Math.random() * 100}%;
+                            animation: floatParticle ${10 + Math.random() * 20}s ease-in-out infinite;
+                            animation-delay: ${Math.random() * 10}s;
+                            opacity: ${Math.random() * 0.5 + 0.2};
+                            pointer-events: none;
+                        `;
+                    container.appendChild(particle);
+                }
+                // Inject keyframes
+                const style = document.createElement('style');
+                style.textContent = `
+                        @keyframes floatParticle {
+                            0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.2; }
+                            25% { transform: translate(${Math.random() > 0.5 ? '' : '-'}${20 + Math.random() * 40}px, ${-20 + Math.random() * 40}px) scale(1.2); opacity: 0.6; }
+                            50% { transform: translate(${Math.random() > 0.5 ? '' : '-'}${10 + Math.random() * 30}px, ${20 + Math.random() * 40}px) scale(0.8); opacity: 0.3; }
+                            75% { transform: translate(${Math.random() > 0.5 ? '' : '-'}${30 + Math.random() * 30}px, ${-10 + Math.random() * 30}px) scale(1.1); opacity: 0.5; }
+                        }
+                    `;
+                document.head.appendChild(style);
+            }
+
+            // ===== RIPPLE EFFECT ON BUTTONS =====
+            function initRipple() {
+                document.querySelectorAll('.btn').forEach(function(btn) {
+                    btn.addEventListener('click', function(e) {
+                        const rect = this.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const y = e.clientY - rect.top;
+                        const ripple = document.createElement('span');
+                        ripple.className = 'ripple';
+                        ripple.style.cssText =
+                            `
+                                left: ${x}px;
+                                top: ${y}px;
+                                width: 20px;
+                                height: 20px;
+                                position: absolute;
+                                border-radius: 50%;
+                                background: rgba(255,255,255,0.3);
+                                transform: scale(0);
+                                animation: rippleAnim 0.6s linear;
+                                pointer-events: none;
+                            `;
+                        this.style.position = 'relative';
+                        this.style.overflow = 'hidden';
+                        this.appendChild(ripple);
+                        setTimeout(function() {
+                            ripple.remove();
+                        }, 600);
+                    });
+                });
+            }
+
+            // ===== SMOOTH SCROLL FOR NAV =====
+            function initSmoothScroll() {
+                document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+                    anchor.addEventListener('click', function(e) {
+                        const targetId = this.getAttribute('href');
+                        if (targetId === '#') return;
+                        const target = document.querySelector(targetId);
+                        if (target) {
+                            e.preventDefault();
+                            const offset = 80;
+                            const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                            window.scrollTo({ top: top, behavior: 'smooth' });
+                            // Update URL without jumping
+                            history.pushState(null, null, targetId);
+                            // Close mobile menu
+                            hamburger.classList.remove('active');
+                            mobileMenu.classList.remove('open');
+                            hamburger.setAttribute('aria-expanded', 'false');
+                        }
+                    });
+                });
+            }
+
+            // ===== KEYBOARD ACCESSIBILITY =====
+            function initKeyboardAccess() {
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape') {
+                        if (mobileMenu.classList.contains('open')) {
+                            hamburger.classList.remove('active');
+                            mobileMenu.classList.remove('open');
+                            hamburger.setAttribute('aria-expanded', 'false');
+                        }
+                    }
+                });
+            }
+
+            // ===== INIT =====
+            function init() {
+                initParticles();
+                initRipple();
+                initSmoothScroll();
+                initKeyboardAccess();
+                revealOnScroll();
+                initTestimonials();
+                initFAQ();
+                initCalculators();
+                initContactForm();
+
+                // Initial language
+                updateLanguage('ar');
+
+                // Trigger counters on load after a delay
+                setTimeout(function() {
+                    animateCounters();
+                }, 1000);
+            }
+
+            // Run on DOM ready
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', init);
+            } else {
+                init();
+            }
+
+            // ===== RESIZE HANDLER FOR TESTIMONIALS =====
+            let resizeTimer;
+            window.addEventListener('resize', function() {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(function() {
+                    // Re-init testimonials on resize
+                    const track = document.getElementById('testTrack');
+                    if (track) {
+                        const cards = track.querySelectorAll('.testimonial-card');
+                        if (cards.length > 0) {
+                            const visible = window.innerWidth < 768 ? 1 : window.innerWidth < 992 ? 2 : 3;
+                            const cardWidth = cards[0].offsetWidth + 30;
+                            const currentIndex = 0;
+                            track.style.transform = 'translateX(0px)';
+                            // Update dots
+                            const dotsContainer = document.getElementById('testDots');
+                            if (dotsContainer) {
+                                const total = Math.ceil(cards.length / visible);
+                                dotsContainer.innerHTML = '';
+                                for (let i = 0; i < total; i++) {
+                                    const dot = document.createElement('button');
+                                    dot.className = 'dot' + (i === 0 ? ' active' : '');
+                                    dot.setAttribute('aria-label', 'Slide ' + (i + 1));
+                                    dot.addEventListener('click', function() {
+                                        const index = i * visible;
+                                        const cardW = cards[0].offsetWidth + 30;
+                                        track.style.transform = 'translateX(-' + (index * cardW) +
+                                        'px)';
+                                        dotsContainer.querySelectorAll('.dot').forEach(function(d) {
+                                            d.classList.remove('active');
+                                        });
+                                        this.classList.add('active');
+                                    });
+                                    dotsContainer.appendChild(dot);
+                                }
+                            }
+                        }
+                    }
+                }, 300);
+            });
+
+        })();
+    </script>
+</body>
+</html>
