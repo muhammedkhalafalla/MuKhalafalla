@@ -3,325 +3,3277 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أحمد خلف الله | مستشار عقاري في دبي</title>
-    <!-- استدعاء خطوط جوجل (كايرو للعربي، ومونتسيرات للإنجليزي) -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* المتغيرات الأساسية للألوان */
-        :root {
-            --primary-dark: #0f172a; /* لون كحلي داكن فاخر */
-            --gold: #d4af37; /* لون ذهبي للعقارات */
-            --light-bg: #f8fafc;
-            --text-color: #333;
-            --font-ar: 'Cairo', sans-serif;
-            --font-en: 'Montserrat', sans-serif;
+    <title>أحمد خلف الله | مستشار عقاري فاخر في دبي - Ahmed Khalafalla Dubai Real Estate</title>
+    <meta name="description" content="أحمد خلف الله - مستشار عقاري فاخر في دبي. خبرة في الاستثمار العقاري، شراء العقارات، إدارة المحافظ، وخدمات المستثمرين الدوليين. Ahmed Khalafalla - Luxury Dubai Real Estate Consultant.">
+    <meta name="keywords" content="أحمد خلف الله, مستشار عقاري دبي, عقارات دبي, استثمار عقاري, شراء عقارات, إدارة محافظ عقارية, Golden Visa, Off Plan, Dubai Real Estate, Ahmed Khalafalla">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ahmedkhalafalla.com/">
+    <meta property="og:title" content="أحمد خلف الله | مستشار عقاري فاخر في دبي">
+    <meta property="og:description" content="مستشار عقاري فاخر في دبي - استثمارات عقارية، شراء عقارات، إدارة محافظ، Golden Visa. Ahmed Khalafalla - Luxury Dubai Real Estate Consultant.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ahmedkhalafalla.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="أحمد خلف الله | مستشار عقاري فاخر في دبي">
+    <meta name="twitter:description" content="مستشار عقاري فاخر في دبي - استثمارات عقارية، شراء عقارات، إدارة محافظ، Golden Visa.">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Ahmed Khalafalla",
+            "jobTitle": "Dubai Real Estate Consultant",
+            "url": "https://ahmedkhalafalla.com/",
+            "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "AE"
+            },
+            "sameAs": [
+                "https://wa.me/971569623792"
+            ]
         }
-
-        * {
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* ===== RESET & BASE ===== */
+        *,
+        *::before,
+        *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: var(--font-ar);
-            transition: all 0.3s ease;
         }
-
+        :root {
+            --primary: #0B1320;
+            --secondary: #111827;
+            --gold: #D4AF37;
+            --gold-light: #e8c84a;
+            --gold-dark: #b8962e;
+            --white: #FFFFFF;
+            --light-gray: #F8F9FA;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.15);
+            --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.25);
+            --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.35);
+            --shadow-2xl: 0 30px 80px rgba(0, 0, 0, 0.45);
+            --shadow-gold: 0 0 30px rgba(212, 175, 55, 0.15);
+            --radius-sm: 6px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --radius-xl: 28px;
+            --radius-2xl: 40px;
+            --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --transition-slow: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --font-ar: 'Cairo', 'Segoe UI', sans-serif;
+            --font-en: 'Poppins', 'Segoe UI', sans-serif;
+            --glass-bg: rgba(255, 255, 255, 0.04);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            --scrollbar-width: 8px;
+        }
+        html {
+            scroll-behavior: smooth;
+            scrollbar-width: thin;
+            scrollbar-color: var(--gold) var(--primary);
+        }
+        ::-webkit-scrollbar {
+            width: var(--scrollbar-width);
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--primary);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--gold);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--gold-light);
+        }
         body {
-            background-color: var(--light-bg);
-            color: var(--text-color);
-            line-height: 1.6;
+            font-family: var(--font-ar);
+            background-color: var(--primary);
+            color: var(--white);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
-
-        /* تنسيق الهيدر */
-        header {
-            background-color: var(--primary-dark);
-            color: white;
-            padding: 15px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
+        body.en {
+            font-family: var(--font-en);
         }
-
-        .logo {
-            font-size: 1.5rem;
+        body.ar {
+            font-family: var(--font-ar);
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        ul {
+            list-style: none;
+        }
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .section-padding {
+            padding: 100px 0;
+        }
+        .section-padding-sm {
+            padding: 60px 0;
+        }
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3.2rem);
             font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.2;
+            position: relative;
+        }
+        .section-title .gold {
             color: var(--gold);
         }
-
-        .lang-btn {
-            background-color: transparent;
-            color: white;
-            border: 1px solid var(--gold);
-            padding: 5px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
+        .section-subtitle {
+            font-size: clamp(1rem, 1.2vw, 1.2rem);
+            color: var(--gray-400);
+            max-width: 600px;
+            margin: 0 auto 50px;
+            text-align: center;
+            line-height: 1.8;
         }
-
-        .lang-btn:hover {
-            background-color: var(--gold);
-            color: var(--primary-dark);
+        .section-subtitle.en {
+            font-weight: 300;
         }
-
-        /* القسم الرئيسي (Hero Section) */
-        .hero {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 50px 5%;
-            background-color: var(--primary-dark);
-            color: white;
-            min-height: 70vh;
-        }
-
-        .hero-text {
-            flex: 1;
-            padding-inline-end: 40px;
-        }
-
-        .hero-text h1 {
-            font-size: 2.8rem;
+        .gold-text {
             color: var(--gold);
+        }
+        .text-center {
+            text-align: center;
+        }
+        .text-right {
+            text-align: right;
+        }
+        .text-left {
+            text-align: left;
+        }
+        .mb-10 {
+            margin-bottom: 10px;
+        }
+        .mb-20 {
             margin-bottom: 20px;
         }
-
-        .hero-text p {
-            font-size: 1.2rem;
+        .mb-30 {
             margin-bottom: 30px;
-            color: #cbd5e1;
         }
-
-        .hero-img {
-            flex: 1;
-            text-align: center;
-        }
-
-        /* ضع مسار صورة أخيك هنا */
-        .hero-img img {
-            width: 100%;
-            max-width: 400px;
-            border-radius: 20px;
-            border: 4px solid var(--gold);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-        }
-
-        .cta-btn {
-            display: inline-block;
-            background-color: var(--gold);
-            color: var(--primary-dark);
-            padding: 15px 30px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-            box-shadow: 0 4px 6px rgba(212, 175, 55, 0.3);
-        }
-
-        .cta-btn:hover {
-            background-color: #bfa030;
-            transform: translateY(-2px);
-        }
-
-        /* قسم الخدمات */
-        .services {
-            padding: 60px 5%;
-            text-align: center;
-        }
-
-        .services h2 {
-            font-size: 2.2rem;
-            color: var(--primary-dark);
+        .mb-40 {
             margin-bottom: 40px;
         }
-
-        .cards {
+        .mb-50 {
+            margin-bottom: 50px;
+        }
+        .mt-20 {
+            margin-top: 20px;
+        }
+        .mt-40 {
+            margin-top: 40px;
+        }
+        .flex {
             display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 20px;
         }
-
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            flex: 1;
-            min-width: 250px;
-            border-bottom: 4px solid var(--gold);
-        }
-
-        .card h3 {
-            color: var(--primary-dark);
-            margin-bottom: 15px;
-        }
-
-        /* زر الواتساب العائم */
-        .whatsapp-float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25d366;
-            color: white;
-            border-radius: 50px;
-            text-align: center;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-            z-index: 1000;
+        .flex-center {
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+        .flex-between {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .gap-10 {
+            gap: 10px;
+        }
+        .gap-20 {
+            gap: 20px;
+        }
+        .gap-30 {
+            gap: 30px;
+        }
+        .gap-40 {
+            gap: 40px;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        .hidden {
+            display: none !important;
+        }
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        /* ===== GLASSMORPHISM ===== */
+        .glass {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--glass-shadow);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: var(--radius-lg);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+        }
+        .glass-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(212, 175, 55, 0.3);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35), 0 0 40px rgba(212, 175, 55, 0.05);
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 36px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 0.5px;
+            text-align: center;
+            min-width: 160px;
+        }
+        .btn .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(0);
+            animation: rippleAnim 0.6s linear;
+            pointer-events: none;
+        }
+        @keyframes rippleAnim {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+        .btn-primary {
+            background: var(--gold);
+            color: var(--primary);
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+        }
+        .btn-primary:hover {
+            background: var(--gold-light);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 32px rgba(212, 175, 55, 0.45);
+        }
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 1.5px solid rgba(255, 255, 255, 0.2);
+        }
+        .btn-outline:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 32px rgba(212, 175, 55, 0.1);
+        }
+        .btn-gold-outline {
+            background: transparent;
+            color: var(--gold);
+            border: 1.5px solid var(--gold);
+        }
+        .btn-gold-outline:hover {
+            background: var(--gold);
+            color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 32px rgba(212, 175, 55, 0.3);
+        }
+        .btn-white {
+            background: var(--white);
+            color: var(--primary);
+        }
+        .btn-white:hover {
+            background: var(--gray-100);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 32px rgba(255, 255, 255, 0.15);
+        }
+        .btn-sm {
+            padding: 10px 24px;
+            font-size: 0.82rem;
+            min-width: 120px;
+        }
+        .btn-lg {
+            padding: 18px 48px;
+            font-size: 1.05rem;
+            min-width: 200px;
+        }
+
+        /* ===== LOADING SCREEN ===== */
+        #loader {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 30px;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+        #loader.hidden-loader {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+        .loader-ring {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 3px solid rgba(212, 175, 55, 0.1);
+            border-top-color: var(--gold);
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        .loader-text {
+            font-size: 0.9rem;
+            color: var(--gray-400);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+        .loader-text .gold {
+            color: var(--gold);
+        }
+
+        /* ===== CURSOR GLOW ===== */
+        #cursor-glow {
+            position: fixed;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.06) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+            transform: translate(-50%, -50%);
+            transition: opacity 0.3s ease;
+            opacity: 0;
+        }
+        #cursor-glow.active {
+            opacity: 1;
+        }
+
+        /* ===== SCROLL PROGRESS ===== */
+        #scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--gold-light));
+            z-index: 9999;
+            width: 0%;
+            transition: width 0.1s linear;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+
+        /* ===== BACK TO TOP ===== */
+        #back-top {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            z-index: 999;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--gold);
+            color: var(--primary);
+            border: none;
+            font-size: 1.3rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #back-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        #back-top:hover {
+            background: var(--gold-light);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(212, 175, 55, 0.5);
+        }
+        html[dir="rtl"] #back-top {
+            right: auto;
+            left: 30px;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 9998;
+            padding: 0 24px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(11, 19, 32, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            transition: var(--transition);
+        }
+        .navbar.scrolled {
+            height: 68px;
+            background: rgba(11, 19, 32, 0.95);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+        }
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: 0.5px;
+        }
+        .navbar .logo .gold {
+            color: var(--gold);
+        }
+        .navbar .logo .logo-icon {
+            width: 38px;
+            height: 38px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.9rem;
+            color: var(--primary);
+        }
+        .navbar .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .navbar .nav-links a {
+            padding: 8px 16px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--gray-300);
+            transition: var(--transition);
+            border-radius: 8px;
+            position: relative;
+            letter-spacing: 0.3px;
+        }
+        .navbar .nav-links a:hover,
+        .navbar .nav-links a.active {
+            color: var(--gold);
+        }
+        .navbar .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: var(--transition);
+        }
+        .navbar .nav-links a:hover::after,
+        .navbar .nav-links a.active::after {
+            width: 60%;
+        }
+        .navbar .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .navbar .nav-actions .lang-toggle {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: var(--white);
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        .navbar .nav-actions .lang-toggle:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+        .navbar .nav-actions .theme-toggle {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: var(--white);
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+        }
+        .navbar .nav-actions .theme-toggle:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+        .navbar .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 6px;
+            background: transparent;
+            border: none;
+        }
+        .navbar .hamburger span {
+            display: block;
+            width: 26px;
+            height: 2.5px;
+            background: var(--white);
+            border-radius: 4px;
+            transition: var(--transition);
+        }
+        .navbar .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .navbar .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .navbar .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* ===== MOBILE MENU ===== */
+        .mobile-menu {
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            z-index: 9997;
+            background: rgba(11, 19, 32, 0.98);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 30px 24px 40px;
+            transform: translateY(-120%);
+            transition: var(--transition);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            max-height: calc(100vh - 80px);
+            overflow-y: auto;
+        }
+        .mobile-menu.open {
+            transform: translateY(0);
+        }
+        .mobile-menu a {
+            display: block;
+            padding: 14px 0;
+            font-size: 1rem;
+            color: var(--gray-300);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            transition: var(--transition);
+            font-weight: 500;
+        }
+        .mobile-menu a:hover {
+            color: var(--gold);
+            padding-right: 12px;
+        }
+        html[dir="rtl"] .mobile-menu a:hover {
+            padding-right: 0;
+            padding-left: 12px;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 0 80px;
+            overflow: hidden;
+            background: var(--primary);
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            overflow: hidden;
+        }
+        .hero-bg video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.3;
+        }
+        .hero-bg .overlay {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 30% 50%, rgba(11, 19, 32, 0.3) 0%, rgba(11, 19, 32, 0.85) 70%, var(--primary) 100%);
+        }
+        .hero-bg .particles {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 820px;
+        }
+        .hero-content .badge {
+            display: inline-block;
+            padding: 6px 20px;
+            border-radius: 50px;
+            background: rgba(212, 175, 55, 0.12);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            color: var(--gold);
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+        }
+        .hero-content h1 {
+            font-size: clamp(2.8rem, 7vw, 5.2rem);
+            font-weight: 900;
+            line-height: 1.05;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+        .hero-content h1 .gold {
+            color: var(--gold);
+        }
+        .hero-content h1 .highlight {
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-content .subtitle {
+            font-size: clamp(1rem, 1.4vw, 1.3rem);
+            color: var(--gray-400);
+            max-width: 600px;
+            margin-bottom: 32px;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+        .hero-content .subtitle.en {
+            font-weight: 300;
+        }
+        .hero-content .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 50px;
+        }
+        .hero-content .hero-stats {
+            display: flex;
+            gap: 50px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .hero-content .hero-stats .stat-item .number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--gold);
+            display: block;
+            line-height: 1.2;
+        }
+        .hero-content .hero-stats .stat-item .label {
+            font-size: 0.82rem;
+            color: var(--gray-500);
+            font-weight: 400;
+        }
+        .hero-scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: var(--gray-500);
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            animation: floatDown 2s ease-in-out infinite;
+        }
+        .hero-scroll-indicator .mouse {
+            width: 26px;
+            height: 40px;
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+        .hero-scroll-indicator .mouse .wheel {
+            width: 3px;
+            height: 10px;
+            background: var(--gold);
+            border-radius: 4px;
+            margin-top: 8px;
+            animation: scrollWheel 1.8s ease-in-out infinite;
+        }
+        @keyframes scrollWheel {
+            0%,
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(10px);
+                opacity: 0.3;
+            }
+        }
+        @keyframes floatDown {
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            50% {
+                transform: translateX(-50%) translateY(8px);
+            }
+        }
+        .hero .floating-elements {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+        .hero .floating-elements .float-item {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.05), transparent);
+            animation: floatAround 20s ease-in-out infinite alternate;
+        }
+        .hero .floating-elements .float-item:nth-child(1) {
+            width: 300px;
+            height: 300px;
+            top: 10%;
+            right: 5%;
+            animation-delay: 0s;
+        }
+        .hero .floating-elements .float-item:nth-child(2) {
+            width: 200px;
+            height: 200px;
+            bottom: 20%;
+            left: 10%;
+            animation-delay: -5s;
+            animation-duration: 25s;
+        }
+        .hero .floating-elements .float-item:nth-child(3) {
+            width: 150px;
+            height: 150px;
+            top: 50%;
+            right: 30%;
+            animation-delay: -10s;
+            animation-duration: 18s;
+        }
+        @keyframes floatAround {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+            33% {
+                transform: translate(30px, -40px) scale(1.1);
+            }
+            66% {
+                transform: translate(-20px, 30px) scale(0.9);
+            }
+            100% {
+                transform: translate(10px, -20px) scale(1.05);
+            }
+        }
+
+        /* ===== STATISTICS ===== */
+        .stats-section {
+            background: var(--secondary);
+            padding: 70px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+        .stats-grid .stat-card {
+            text-align: center;
+            padding: 20px;
+        }
+        .stats-grid .stat-card .number {
+            font-size: 2.6rem;
+            font-weight: 800;
+            color: var(--gold);
+            line-height: 1.2;
+            display: block;
+        }
+        .stats-grid .stat-card .number .suffix {
+            font-size: 1.4rem;
+        }
+        .stats-grid .stat-card .label {
+            font-size: 0.85rem;
+            color: var(--gray-400);
+            font-weight: 400;
+            margin-top: 4px;
+        }
+        .stats-grid .stat-card .label.en {
+            font-weight: 300;
+        }
+
+        /* ===== FEATURED PROJECTS ===== */
+        .projects-section {
+            background: var(--primary);
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .project-card {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            transition: var(--transition);
+            position: relative;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(212, 175, 55, 0.2);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+        .project-card .image-wrap {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 16/10;
+            background: var(--secondary);
+        }
+        .project-card .image-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-slow);
+        }
+        .project-card:hover .image-wrap img {
+            transform: scale(1.05);
+        }
+        .project-card .image-wrap .badge {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: var(--gold);
+            color: var(--primary);
+            padding: 4px 16px;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .project-card .image-wrap .roi-badge {
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            padding: 4px 14px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            color: var(--gold);
+            font-weight: 600;
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        html[dir="rtl"] .project-card .image-wrap .badge,
+        html[dir="rtl"] .project-card .image-wrap .roi-badge {
+            right: auto;
+            left: 16px;
+        }
+        .project-card .info {
+            padding: 20px 22px 24px;
+        }
+        .project-card .info .title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .project-card .info .location {
+            font-size: 0.85rem;
+            color: var(--gray-400);
+            margin-bottom: 12px;
+        }
+        .project-card .info .details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 20px;
+            padding: 12px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            margin-bottom: 16px;
+        }
+        .project-card .info .details span {
+            font-size: 0.8rem;
+            color: var(--gray-400);
+        }
+        .project-card .info .details span strong {
+            color: var(--white);
+            font-weight: 600;
+        }
+        .project-card .info .price {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 14px;
+        }
+        .project-card .info .price small {
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: var(--gray-400);
+        }
+        .project-card .info .btn {
+            width: 100%;
+            justify-content: center;
+        }
+
+        /* ===== DEVELOPERS ===== */
+        .developers-section {
+            background: var(--secondary);
+        }
+        .developers-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .developer-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: var(--radius-md);
+            padding: 30px 20px;
+            text-align: center;
+            transition: var(--transition);
+        }
+        .developer-card:hover {
+            border-color: rgba(212, 175, 55, 0.2);
+            transform: translateY(-6px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+        }
+        .developer-card .icon {
+            font-size: 2.4rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .developer-card .name {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        .developer-card .count {
+            font-size: 0.8rem;
+            color: var(--gray-500);
+        }
+
+        /* ===== WHY CHOOSE ===== */
+        .why-section {
+            background: var(--primary);
+        }
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .why-card {
+            padding: 36px 30px;
+            text-align: center;
+            border-radius: var(--radius-lg);
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            transition: var(--transition);
+        }
+        .why-card:hover {
+            border-color: rgba(212, 175, 55, 0.2);
+            transform: translateY(-6px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+        }
+        .why-card .icon {
+            font-size: 2.8rem;
+            margin-bottom: 16px;
+            display: block;
+        }
+        .why-card h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .why-card p {
+            font-size: 0.92rem;
+            color: var(--gray-400);
+            line-height: 1.7;
+        }
+
+        /* ===== INVESTMENT ADVANTAGES ===== */
+        .investment-section {
+            background: var(--secondary);
+        }
+        .investment-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .investment-item {
+            padding: 24px;
+            border-radius: var(--radius-md);
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            text-align: center;
+            transition: var(--transition);
+        }
+        .investment-item:hover {
+            border-color: rgba(212, 175, 55, 0.2);
+            transform: translateY(-4px);
+        }
+        .investment-item .number {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--gold);
+            display: block;
+        }
+        .investment-item .label {
+            font-size: 0.85rem;
+            color: var(--gray-400);
+            margin-top: 4px;
+        }
+
+        /* ===== MARKET STATS ===== */
+        .market-section {
+            background: var(--primary);
+        }
+        .market-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        .market-chart {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: var(--radius-lg);
+            padding: 30px;
+        }
+        .market-chart .bar-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .market-chart .bar-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .market-chart .bar-item .label {
+            font-size: 0.85rem;
+            color: var(--gray-400);
+            min-width: 80px;
+            font-weight: 500;
+        }
+        .market-chart .bar-item .track {
+            flex: 1;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+        .market-chart .bar-item .track .fill {
+            height: 100%;
+            border-radius: 10px;
+            background: linear-gradient(90deg, var(--gold), var(--gold-light));
+            width: 0%;
+            transition: width 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .market-chart .bar-item .value {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--white);
+            min-width: 50px;
+            text-align: right;
+        }
+        html[dir="rtl"] .market-chart .bar-item .value {
+            text-align: left;
+        }
+
+        /* ===== PROPERTY TYPES ===== */
+        .property-section {
+            background: var(--secondary);
+        }
+        .property-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .property-card {
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: var(--radius-md);
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        .property-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-6px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+        }
+        .property-card .icon {
+            font-size: 2.6rem;
+            display: block;
+            margin-bottom: 12px;
+        }
+        .property-card .name {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        .property-card .desc {
+            font-size: 0.8rem;
+            color: var(--gray-500);
+            margin-top: 4px;
+        }
+
+        /* ===== CALCULATORS ===== */
+        .calculators-section {
+            background: var(--primary);
+        }
+        .calc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        .calc-card {
+            padding: 36px 32px;
+            border-radius: var(--radius-lg);
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+        }
+        .calc-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .calc-card .sub {
+            font-size: 0.9rem;
+            color: var(--gray-400);
+            margin-bottom: 24px;
+        }
+        .calc-card .form-group {
+            margin-bottom: 18px;
+        }
+        .calc-card .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 6px;
+            color: var(--gray-300);
+        }
+        .calc-card .form-group input,
+        .calc-card .form-group select {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: var(--radius-sm);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.03);
+            color: var(--white);
+            font-size: 0.95rem;
+            transition: var(--transition);
+            font-family: inherit;
+        }
+        .calc-card .form-group input:focus,
+        .calc-card .form-group select:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+        }
+        .calc-card .form-group input::placeholder {
+            color: var(--gray-500);
+        }
+        .calc-card .result {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: var(--radius-sm);
+            background: rgba(212, 175, 55, 0.06);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            text-align: center;
+        }
+        .calc-card .result .value {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--gold);
+        }
+        .calc-card .result .label {
+            font-size: 0.85rem;
+            color: var(--gray-400);
+        }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonials-section {
+            background: var(--secondary);
+            overflow: hidden;
+        }
+        .testimonials-carousel {
+            position: relative;
+            overflow: hidden;
+        }
+        .testimonials-track {
+            display: flex;
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            gap: 30px;
+        }
+        .testimonial-card {
+            min-width: calc(33.333% - 20px);
+            padding: 30px 28px;
+            border-radius: var(--radius-lg);
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            flex-shrink: 0;
+        }
+        .testimonial-card .stars {
+            color: var(--gold);
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            letter-spacing: 2px;
+        }
+        .testimonial-card .text {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: var(--gray-300);
+            margin-bottom: 16px;
+            font-style: italic;
+        }
+        .testimonial-card .author {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .testimonial-card .author .avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+        .testimonial-card .author .name {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        .testimonial-card .author .role {
+            font-size: 0.8rem;
+            color: var(--gray-500);
+        }
+        .testimonials-nav {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 30px;
+        }
+        .testimonials-nav button {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: transparent;
+            color: var(--white);
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .testimonials-nav button:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+        .testimonials-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 20px;
+        }
+        .testimonials-dots .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+        }
+        .testimonials-dots .dot.active {
+            background: var(--gold);
+            width: 30px;
+            border-radius: 10px;
+        }
+
+        /* ===== TIMELINE ===== */
+        .timeline-section {
+            background: var(--primary);
+        }
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            right: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: rgba(212, 175, 55, 0.15);
+            transform: translateX(50%);
+        }
+        html[dir="rtl"] .timeline::before {
+            right: 50%;
+            transform: translateX(50%);
+        }
+        .timeline-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        .timeline-item .left,
+        .timeline-item .right {
+            width: 50%;
+            padding: 0 40px;
+        }
+        .timeline-item .left {
+            text-align: right;
+            padding-left: 60px;
+        }
+        .timeline-item .right {
+            text-align: left;
+            padding-right: 60px;
+        }
+        html[dir="rtl"] .timeline-item .left {
+            text-align: left;
+            padding-left: 40px;
+            padding-right: 60px;
+        }
+        html[dir="rtl"] .timeline-item .right {
+            text-align: right;
+            padding-right: 40px;
+            padding-left: 60px;
+        }
+        .timeline-item .dot {
+            position: absolute;
+            right: 50%;
+            transform: translateX(50%);
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: var(--gold);
+            border: 4px solid var(--primary);
+            box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.15);
+            z-index: 2;
+            top: 6px;
+        }
+        html[dir="rtl"] .timeline-item .dot {
+            right: 50%;
+            transform: translateX(50%);
+        }
+        .timeline-item .step-number {
+            font-size: 0.8rem;
+            color: var(--gold);
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .timeline-item h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 4px 0 8px;
+        }
+        .timeline-item p {
+            font-size: 0.9rem;
+            color: var(--gray-400);
+            line-height: 1.7;
+        }
+        .timeline-item:nth-child(odd) .left {
+            order: 1;
+        }
+        .timeline-item:nth-child(odd) .right {
+            order: 2;
+        }
+        .timeline-item:nth-child(even) .left {
+            order: 2;
+        }
+        .timeline-item:nth-child(even) .right {
+            order: 1;
+        }
+        html[dir="rtl"] .timeline-item:nth-child(odd) .left {
+            order: 2;
+        }
+        html[dir="rtl"] .timeline-item:nth-child(odd) .right {
+            order: 1;
+        }
+        html[dir="rtl"] .timeline-item:nth-child(even) .left {
+            order: 1;
+        }
+        html[dir="rtl"] .timeline-item:nth-child(even) .right {
+            order: 2;
+        }
+
+        /* ===== FAQ ===== */
+        .faq-section {
+            background: var(--secondary);
+        }
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            padding: 18px 0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-item .question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.05rem;
+            padding: 6px 0;
+            transition: var(--transition);
+        }
+        .faq-item .question:hover {
+            color: var(--gold);
+        }
+        .faq-item .question .icon {
+            font-size: 1.2rem;
+            transition: var(--transition);
+            color: var(--gold);
+        }
+        .faq-item .question .icon.open {
+            transform: rotate(45deg);
+        }
+        .faq-item .answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.4s ease;
+            opacity: 0;
+            color: var(--gray-400);
+            line-height: 1.8;
+            font-size: 0.92rem;
+        }
+        .faq-item .answer.open {
+            max-height: 300px;
+            opacity: 1;
+            padding-top: 12px;
+        }
+
+        /* ===== CONTACT ===== */
+        .contact-section {
+            background: var(--primary);
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        .contact-form-wrap {
+            padding: 40px;
+            border-radius: var(--radius-lg);
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+        }
+        .contact-form-wrap .form-group {
+            margin-bottom: 18px;
+        }
+        .contact-form-wrap .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 6px;
+            color: var(--gray-300);
+        }
+        .contact-form-wrap .form-group input,
+        .contact-form-wrap .form-group textarea,
+        .contact-form-wrap .form-group select {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: var(--radius-sm);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.03);
+            color: var(--white);
+            font-size: 0.95rem;
+            transition: var(--transition);
+            font-family: inherit;
+        }
+        .contact-form-wrap .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        .contact-form-wrap .form-group input:focus,
+        .contact-form-wrap .form-group textarea:focus,
+        .contact-form-wrap .form-group select:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+        }
+        .contact-form-wrap .form-group input::placeholder,
+        .contact-form-wrap .form-group textarea::placeholder {
+            color: var(--gray-500);
+        }
+        .contact-info {
+            padding: 40px;
+            border-radius: var(--radius-lg);
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .contact-info .item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        }
+        .contact-info .item:last-child {
+            border-bottom: none;
+        }
+        .contact-info .item .icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(212, 175, 55, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+            color: var(--gold);
+        }
+        .contact-info .item .text {
+            font-size: 0.92rem;
+        }
+        .contact-info .item .text .label {
+            font-size: 0.75rem;
+            color: var(--gray-500);
+            display: block;
+        }
+        .map-placeholder {
+            margin-top: 40px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            height: 300px;
+            background: var(--secondary);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray-500);
+            font-size: 0.9rem;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--secondary);
+            padding: 60px 0 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        }
+        .footer .brand .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .footer .brand .logo .gold {
+            color: var(--gold);
+        }
+        .footer .brand p {
+            color: var(--gray-400);
+            font-size: 0.9rem;
+            max-width: 300px;
+            line-height: 1.8;
+        }
+        .footer .col h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--white);
+        }
+        .footer .col a {
+            display: block;
+            color: var(--gray-400);
+            font-size: 0.88rem;
+            padding: 6px 0;
+            transition: var(--transition);
+        }
+        .footer .col a:hover {
+            color: var(--gold);
+            padding-right: 6px;
+        }
+        html[dir="rtl"] .footer .col a:hover {
+            padding-right: 0;
+            padding-left: 6px;
+        }
+        .footer .bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 30px;
+            font-size: 0.82rem;
+            color: var(--gray-500);
+        }
+        .footer .bottom .socials {
+            display: flex;
+            gap: 12px;
+        }
+        .footer .bottom .socials a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray-400);
+            transition: var(--transition);
+            font-size: 1rem;
+        }
+        .footer .bottom .socials a:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        /* ===== WHATSAPP FLOAT ===== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 999;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: #25D366;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 30px rgba(37, 211, 102, 0.35);
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
             text-decoration: none;
         }
-        
         html[dir="rtl"] .whatsapp-float {
-            right: auto;
-            left: 20px;
+            left: auto;
+            right: 30px;
         }
-
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 48px rgba(37, 211, 102, 0.5);
+        }
         .whatsapp-float svg {
-            width: 35px;
-            height: 35px;
+            width: 32px;
+            height: 32px;
             fill: white;
         }
-
-        .whatsapp-float:hover {
-            background-color: #1ebe5d;
-            transform: scale(1.1);
+        .whatsapp-float .pulse {
+            position: absolute;
+            inset: -8px;
+            border-radius: 50%;
+            border: 2px solid rgba(37, 211, 102, 0.3);
+            animation: pulseWA 2s ease-out infinite;
+        }
+        @keyframes pulseWA {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.4);
+                opacity: 0;
+            }
         }
 
-        /* التجاوب مع شاشات الموبايل */
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1200px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .stats-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .developers-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .investment-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .property-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 992px) {
+            .navbar .nav-links {
+                display: none;
+            }
+            .navbar .hamburger {
+                display: flex;
+            }
+            .hero-content .hero-stats {
+                gap: 30px;
+                flex-wrap: wrap;
+            }
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+            .grid-3 {
+                grid-template-columns: 1fr 1fr;
+            }
+            .grid-4 {
+                grid-template-columns: 1fr 1fr;
+            }
+            .calc-grid {
+                grid-template-columns: 1fr;
+            }
+            .market-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .testimonial-card {
+                min-width: calc(50% - 15px);
+            }
+            .why-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .timeline-item .left,
+            .timeline-item .right {
+                padding: 0 20px;
+            }
+            .timeline-item .left {
+                padding-left: 40px;
+            }
+            .timeline-item .right {
+                padding-right: 40px;
+            }
+            html[dir="rtl"] .timeline-item .left {
+                padding-right: 40px;
+                padding-left: 20px;
+            }
+            html[dir="rtl"] .timeline-item .right {
+                padding-left: 40px;
+                padding-right: 20px;
+            }
+        }
         @media (max-width: 768px) {
+            .section-padding {
+                padding: 60px 0;
+            }
+            .section-padding-sm {
+                padding: 40px 0;
+            }
             .hero {
+                min-height: auto;
+                padding: 100px 0 60px;
+            }
+            .hero-content h1 {
+                font-size: 2.4rem;
+            }
+            .hero-content .hero-stats {
+                gap: 20px;
+            }
+            .hero-content .hero-stats .stat-item .number {
+                font-size: 1.4rem;
+            }
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+            .stats-grid .stat-card .number {
+                font-size: 1.8rem;
+            }
+            .developers-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .investment-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .property-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+            .grid-4 {
+                grid-template-columns: 1fr 1fr;
+            }
+            .testimonial-card {
+                min-width: calc(100% - 10px);
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .footer .bottom {
                 flex-direction: column;
+                gap: 16px;
                 text-align: center;
-                padding-top: 30px;
             }
-            .hero-text {
-                padding-inline-end: 0;
-                margin-bottom: 30px;
+            .contact-form-wrap {
+                padding: 24px;
             }
-            .hero-text h1 {
-                font-size: 2rem;
+            .contact-info {
+                padding: 24px;
+            }
+            .timeline::before {
+                right: 20px;
+                transform: none;
+            }
+            html[dir="rtl"] .timeline::before {
+                right: 20px;
+                transform: none;
+            }
+            .timeline-item {
+                flex-direction: column;
+                padding-right: 40px;
+            }
+            html[dir="rtl"] .timeline-item {
+                padding-right: 0;
+                padding-left: 40px;
+            }
+            .timeline-item .left,
+            .timeline-item .right {
+                width: 100%;
+                padding: 0 !important;
+                text-align: right !important;
+            }
+            html[dir="rtl"] .timeline-item .left,
+            html[dir="rtl"] .timeline-item .right {
+                text-align: left !important;
+            }
+            .timeline-item .dot {
+                right: 20px;
+                transform: none;
+            }
+            html[dir="rtl"] .timeline-item .dot {
+                right: auto;
+                left: 20px;
+                transform: none;
+            }
+            .timeline-item:nth-child(odd) .left {
+                order: 0;
+            }
+            .timeline-item:nth-child(odd) .right {
+                order: 0;
+            }
+            .timeline-item:nth-child(even) .left {
+                order: 0;
+            }
+            .timeline-item:nth-child(even) .right {
+                order: 0;
+            }
+            html[dir="rtl"] .timeline-item:nth-child(odd) .left {
+                order: 0;
+            }
+            html[dir="rtl"] .timeline-item:nth-child(odd) .right {
+                order: 0;
+            }
+            html[dir="rtl"] .timeline-item:nth-child(even) .left {
+                order: 0;
+            }
+            html[dir="rtl"] .timeline-item:nth-child(even) .right {
+                order: 0;
+            }
+            .navbar .logo {
+                font-size: 1rem;
+            }
+            .navbar .logo .logo-icon {
+                width: 32px;
+                height: 32px;
+                font-size: 0.7rem;
+            }
+            .whatsapp-float {
+                width: 54px;
+                height: 54px;
+                bottom: 20px;
+                left: 20px;
+            }
+            html[dir="rtl"] .whatsapp-float {
+                left: auto;
+                right: 20px;
+            }
+            .whatsapp-float svg {
+                width: 26px;
+                height: 26px;
+            }
+            #back-top {
+                bottom: 90px;
+                right: 20px;
+                width: 44px;
+                height: 44px;
+                font-size: 1rem;
+            }
+            html[dir="rtl"] #back-top {
+                right: auto;
+                left: 20px;
+            }
+            .calc-card {
+                padding: 24px 20px;
+            }
+            .market-chart {
+                padding: 20px;
+            }
+            .market-chart .bar-item .label {
+                min-width: 60px;
+                font-size: 0.75rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+            .hero-content .hero-buttons .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 6px;
+            }
+            .stats-grid .stat-card .number {
+                font-size: 1.4rem;
+            }
+            .stats-grid .stat-card .label {
+                font-size: 0.7rem;
+            }
+            .developers-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+            .investment-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+            .property-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+            .grid-4 {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+            .section-title {
+                font-size: 1.6rem;
+            }
+            .project-card .info .price {
+                font-size: 1.1rem;
+            }
+            .navbar {
+                height: 68px;
+                padding: 0 16px;
+            }
+            .navbar .nav-actions .lang-toggle {
+                padding: 4px 10px;
+                font-size: 0.65rem;
+            }
+            .navbar .nav-actions .theme-toggle {
+                width: 32px;
+                height: 32px;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* ===== DARK/LIGHT MODE ===== */
+        body.light-mode {
+            --primary: #f8f9fa;
+            --secondary: #ffffff;
+            --white: #111827;
+            --gray-300: #374151;
+            --gray-400: #4b5563;
+            --gray-500: #6b7280;
+            --glass-bg: rgba(0, 0, 0, 0.02);
+            --glass-border: rgba(0, 0, 0, 0.06);
+            --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.08);
+            --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.1);
+            background: #f8f9fa;
+            color: #111827;
+        }
+        body.light-mode .navbar {
+            background: rgba(255, 255, 255, 0.92);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+        }
+        body.light-mode .navbar .logo {
+            color: var(--primary);
+        }
+        body.light-mode .navbar .nav-links a {
+            color: var(--gray-600);
+        }
+        body.light-mode .navbar .nav-links a:hover {
+            color: var(--gold);
+        }
+        body.light-mode .navbar .nav-actions .lang-toggle {
+            border-color: rgba(0, 0, 0, 0.08);
+            color: var(--gray-700);
+        }
+        body.light-mode .navbar .nav-actions .theme-toggle {
+            border-color: rgba(0, 0, 0, 0.08);
+            color: var(--gray-700);
+        }
+        body.light-mode .hero {
+            background: #f8f9fa;
+        }
+        body.light-mode .hero-bg .overlay {
+            background: radial-gradient(ellipse at 30% 50%, rgba(255, 255, 255, 0.4) 0%, rgba(248, 249, 250, 0.85) 70%, #f8f9fa 100%);
+        }
+        body.light-mode .hero-content .subtitle {
+            color: var(--gray-600);
+        }
+        body.light-mode .hero-content .hero-stats {
+            border-top-color: rgba(0, 0, 0, 0.06);
+        }
+        body.light-mode .hero-content .hero-stats .stat-item .label {
+            color: var(--gray-500);
+        }
+        body.light-mode .stats-section {
+            background: #ffffff;
+            border-top-color: rgba(0, 0, 0, 0.04);
+            border-bottom-color: rgba(0, 0, 0, 0.04);
+        }
+        body.light-mode .projects-section {
+            background: #f8f9fa;
+        }
+        body.light-mode .project-card {
+            background: #ffffff;
+            border-color: rgba(0, 0, 0, 0.04);
+        }
+        body.light-mode .project-card .info .details span strong {
+            color: var(--primary);
+        }
+        body.light-mode .developers-section {
+            background: #ffffff;
+        }
+        body.light-mode .developer-card {
+            background: #f8f9fa;
+            border-color: rgba(0, 0, 0, 0.04);
+        }
+        body.light-mode .why-section {
+            background: #f8f9fa;
+        }
+        body.light-mode .why-card {
+            background: #ffffff;
+            border-color: rgba(0, 0, 0, 0.04);
+        }
+        body.light-mode .investment-section {
+            background: #ffffff;
+        }
+        body.light-mode .investment-item {
+            background: #f8f9fa;
+            border-color: rgba(0, 0, 0, 0.04);
+        }
+        body.light-mode .market-section {
+            background: #f8f9fa;
+        }
+        body.light-mode .market-chart {
+            background: #ffffff;
+            border-color: rgba(0, 0, 0, 0.04);
+        }
+        body.light-mode .market-chart .bar-item .track {
+            background: rgba(0, 0, 0, 0.06);
+        }
+        body.light-mode .market-chart .bar-item .value {
+            color: var(--primary);
+        }
+        body.light-mode .property-section {
+            background: #ffffff;
+        }
+        body.light-mode .property-card {
+            background: #f8f9fa;
+            border-color: rgba(0, 0, 0, 0.04);
+        }
+        body.light-mode .calculators-section {
+            background: #f8f9fa;
+        }
+        body.light-mode .calc-card {
+            background: #ffffff;
+            border-color: rgba(0, 0, 0, 0.04);
+        }
+        body.light-mode .calc-card .form-group input,
+        body.light-mode .calc-card .form-group select {
+            background: #f8f9fa;
+            border-color: rgba(0, 0, 0, 0.06);
+            color: var(--primary);
+        }
+        body.light-mode .calc-card .form-group label {
+            color: var(--gray-600);
+        }
+        body.light-mode .calc-card .result {
+            background: rgba(212, 175, 55, 0.06);
+            border-color: rgba(212, 175, 55, 0.1);
+        }
+        body.light-mode .testimonials-section {
+            background: #ffffff;
+        }
+        body.light-mode .testimonial-card {
+            background: #f8f9fa;
+            border-color: rgba(0, 0, 0, 0.04);
+        }
+        body.light-mode .testimonial-card .text {
+            color: var(--gray-600);
+        }
+        body.light-mode .timeline-section {
+            background: #f8f9fa;
+        }
+        body.light-mode .timeline::before {
+            background: rgba(212, 175, 55, 0.15);
+        }
+        body.light-mode .faq-section {
+            background: #ffffff;
+        }
+        body.light-mode .faq-item {
+            border-bottom-color: rgba(0, 0, 0, 0.04);
+        }
+        body.light-mode .faq-item .answer {
+            color: var(--gray-600);
+        }
+        body.light-mode .contact-section {
+            background: #f8f9fa;
+        }
+        body.light-mode .contact-form-wrap {
+            background: #ffffff;
+            border-color: rgba(0, 0, 0, 0.04);
+        }
+        body.light-mode .contact-form-wrap .form-group input,
+        body.light-mode .contact-form-wrap .form-group textarea,
+        body.light-mode .contact-form-wrap .form-group select {
+            background: #f8f9fa;
+            border-color: rgba(0, 0, 0, 0.06);
+            color: var(--primary);
+        }
+        body.light-mode .contact-form-wrap .form-group label {
+            color: var(--gray-600);
+        }
+        body.light-mode .contact-info {
+            background: #ffffff;
+            border-color: rgba(0, 0, 0, 0.04);
+        }
+        body.light-mode .contact-info .item {
+            border-bottom-color: rgba(0, 0, 0, 0.04);
+        }
+        body.light-mode .footer {
+            background: #ffffff;
+            border-top-color: rgba(0, 0, 0, 0.04);
+        }
+        body.light-mode .footer .brand p {
+            color: var(--gray-500);
+        }
+        body.light-mode .footer .col a {
+            color: var(--gray-500);
+        }
+        body.light-mode .footer .bottom {
+            color: var(--gray-400);
+        }
+        body.light-mode .footer .bottom .socials a {
+            border-color: rgba(0, 0, 0, 0.06);
+            color: var(--gray-400);
+        }
+        body.light-mode .mobile-menu {
+            background: rgba(255, 255, 255, 0.98);
+            border-bottom-color: rgba(0, 0, 0, 0.04);
+        }
+        body.light-mode .mobile-menu a {
+            color: var(--gray-600);
+            border-bottom-color: rgba(0, 0, 0, 0.04);
+        }
+        body.light-mode .mobile-menu a:hover {
+            color: var(--gold);
+        }
+        body.light-mode .section-subtitle {
+            color: var(--gray-500);
+        }
+        body.light-mode .map-placeholder {
+            background: #ffffff;
+            border-color: rgba(0, 0, 0, 0.04);
+            color: var(--gray-400);
+        }
+        body.light-mode .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            border-color: rgba(0, 0, 0, 0.04);
+        }
+        body.light-mode .btn-outline {
+            color: var(--primary);
+            border-color: rgba(0, 0, 0, 0.12);
+        }
+        body.light-mode .btn-outline:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+        body.light-mode .btn-gold-outline {
+            color: var(--gold);
+            border-color: var(--gold);
+        }
+        body.light-mode .btn-gold-outline:hover {
+            background: var(--gold);
+            color: var(--white);
+        }
+        body.light-mode .hero-scroll-indicator .mouse {
+            border-color: rgba(0, 0, 0, 0.12);
+        }
+        body.light-mode .hero-scroll-indicator {
+            color: var(--gray-400);
+        }
+        body.light-mode .hero .floating-elements .float-item {
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.03), transparent);
+        }
+        body.light-mode .project-card .image-wrap .badge {
+            color: var(--white);
+        }
+        body.light-mode .project-card .image-wrap .roi-badge {
+            background: rgba(255, 255, 255, 0.85);
+        }
+
+        /* ===== REVEAL ANIMATIONS ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .reveal-scale {
+            opacity: 0;
+            transform: scale(0.92);
+            transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal-scale.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* ===== FLOATING ELEMENTS GENERAL ===== */
+        .float-anim {
+            animation: floatY 6s ease-in-out infinite;
+        }
+        .float-anim-delay-1 {
+            animation-delay: 0s;
+        }
+        .float-anim-delay-2 {
+            animation-delay: 2s;
+        }
+        .float-anim-delay-3 {
+            animation-delay: 4s;
+        }
+        @keyframes floatY {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-14px);
+            }
+        }
+
+        /* ===== TYPOGRAPHY HELPERS ===== */
+        .font-ar {
+            font-family: var(--font-ar);
+        }
+        .font-en {
+            font-family: var(--font-en);
+        }
+        .fw-300 {
+            font-weight: 300;
+        }
+        .fw-600 {
+            font-weight: 600;
+        }
+        .fw-700 {
+            font-weight: 700;
+        }
+        .fw-800 {
+            font-weight: 800;
+        }
+        .fw-900 {
+            font-weight: 900;
+        }
+        .tracking-wide {
+            letter-spacing: 1px;
+        }
+        .tracking-wider {
+            letter-spacing: 2px;
+        }
+
+        /* ===== GRADIENT BORDERS ===== */
+        .gradient-border {
+            position: relative;
+        }
+        .gradient-border::before {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            border-radius: inherit;
+            padding: 1px;
+            background: linear-gradient(135deg, var(--gold), transparent, var(--gold));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        /* ===== SELECTION ===== */
+        ::selection {
+            background: var(--gold);
+            color: var(--primary);
+        }
+
+        /* ===== ACCESSIBILITY ===== */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- الشريط العلوي -->
-    <header>
-        <div class="logo" id="logoText">أحمد خلف الله</div>
-        <button class="lang-btn" id="langToggle" onclick="toggleLanguage()">English</button>
+    <!-- ===== LOADING SCREEN ===== -->
+    <div id="loader" role="status" aria-label="Loading">
+        <div class="loader-ring"></div>
+        <div class="loader-text"><span class="gold">✦</span> loading <span class="gold">✦</span></div>
+    </div>
+
+    <!-- ===== SCROLL PROGRESS ===== -->
+    <div id="scroll-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
+    <!-- ===== CURSOR GLOW ===== -->
+    <div id="cursor-glow" aria-hidden="true"></div>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="logo">
+            <span class="logo-icon">A</span>
+            <span id="logoText">أحمد خلف الله</span>
+        </div>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="#hero" class="active" data-i18n="navHome">الرئيسية</a>
+            <a href="#projects" data-i18n="navProjects">مشاريع</a>
+            <a href="#developers" data-i18n="navDevelopers">مطورين</a>
+            <a href="#why" data-i18n="navWhy">لماذا أحمد</a>
+            <a href="#testimonials" data-i18n="navTestimonials">آراء العملاء</a>
+            <a href="#contact" data-i18n="navContact">اتصل بي</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="lang-toggle" id="langToggle" aria-label="Toggle language">English</button>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </header>
 
-    <!-- القسم الرئيسي -->
-    <section class="hero">
-        <div class="hero-text">
-            <h1 id="heroTitle">مستشارك العقاري الموثوق في دبي</h1>
-            <p id="heroDesc">أساعدك في العثور على عقار أحلامك أو أفضل فرصة استثمارية في سوق دبي العقاري بأعلى عائد استثماري، بخبرة واحترافية تامة.</p>
-            <!-- قم بتعديل رقم الواتساب هنا (بدون أصفار أو علامة +) -->
-            <a href="https://wa.me/971569623792?text=مرحباً%20أحمد،%20أنا%20مهتم%20بالاستثمار%20العقاري%20في%20دبي" class="cta-btn" id="heroBtn" target="_blank">تواصل معي لبدء استثمارك</a>
+    <!-- ===== MOBILE MENU ===== -->
+    <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
+        <a href="#hero" data-i18n="navHome">الرئيسية</a>
+        <a href="#projects" data-i18n="navProjects">مشاريع</a>
+        <a href="#developers" data-i18n="navDevelopers">مطورين</a>
+        <a href="#why" data-i18n="navWhy">لماذا أحمد</a>
+        <a href="#testimonials" data-i18n="navTestimonials">آراء العملاء</a>
+        <a href="#contact" data-i18n="navContact">اتصل بي</a>
+    </div>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <video autoplay muted loop playsinline aria-hidden="true">
+                <source src="https://cdn.pixabay.com/video/2024/01/15/196647-902867253_large.mp4" type="video/mp4">
+            </video>
+            <div class="overlay"></div>
+            <div class="particles" id="particles"></div>
         </div>
-        <div class="hero-img">
-            <!-- ضع رابط صورة أحمد الشخصية هنا -->
-            <img src=\AhmedKhalafalla\Ahmed Khalafalla.jpg" alt="Ahmed Khalafalla">
+        <div class="floating-elements" aria-hidden="true">
+            <div class="float-item"></div>
+            <div class="float-item"></div>
+            <div class="float-item"></div>
+        </div>
+
+        <div class="container hero-content">
+            <div class="badge" data-i18n="heroBadge">✦ دبي العقارية ✦</div>
+            <h1>
+                <span data-i18n="heroTitle1">مستشارك</span><br>
+                <span class="highlight" data-i18n="heroTitle2">العقاري الموثوق</span><br>
+                <span data-i18n="heroTitle3">في دبي</span>
+            </h1>
+            <p class="subtitle" data-i18n="heroDesc">
+                أساعدك في العثور على عقار أحلامك أو أفضل فرصة استثمارية في سوق دبي العقاري بأعلى عائد استثماري، بخبرة واحترافية تامة.
+            </p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/971569623792?text=مرحباً%20أحمد،%20أنا%20مهتم%20بالاستثمار%20العقاري%20في%20دبي" target="_blank" class="btn btn-primary" data-i18n="heroBtnWhatsapp">
+                    <span>📱</span> تواصل واتساب
+                </a>
+                <a href="#contact" class="btn btn-outline" data-i18n="heroBtnConsult">
+                    <span>📋</span> استشارة مجانية
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="number" data-count="150">0</span>
+                    <span class="label" data-i18n="statProjects">مشروع عقاري</span>
+                </div>
+                <div class="stat-item">
+                    <span class="number" data-count="500">0</span>
+                    <span class="label" data-i18n="statInvestors">مستثمر سعيد</span>
+                </div>
+                <div class="stat-item">
+                    <span class="number" data-count="12">0</span>
+                    <span class="label" data-i18n="statYears">سنوات خبرة</span>
+                </div>
+                <div class="stat-item">
+                    <span class="number" data-count="2.5">0</span>
+                    <span class="label" data-i18n="statSales">مليار درهم مبيعات</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-scroll-indicator" aria-hidden="true">
+            <div class="mouse"><div class="wheel"></div></div>
+            <span data-i18n="scrollText">تمرير</span>
         </div>
     </section>
 
-    <!-- قسم الخدمات -->
-    <section class="services">
-        <h2 id="servicesTitle">الخدمات العقارية</h2>
-        <div class="cards">
-            <div class="card">
-                <h3 id="srv1Title">استشارات استثمارية</h3>
-                <p id="srv1Desc">تحليل دقيق لسوق دبي واختيار أفضل المشاريع التي تضمن لك أعلى عائد على الاستثمار (ROI).</p>
-            </div>
-            <div class="card">
-                <h3 id="srv2Title">شراء العقارات</h3>
-                <p id="srv2Desc">تسهيل عملية الشراء من المطورين المعتمدين مباشرة أو من السوق الثانوي بأفضل الأسعار المتاحة.</p>
-            </div>
-            <div class="card">
-                <h3 id="srv3Title">إدارة المحافظ العقارية</h3>
-                <p id="srv3Desc">متابعة إجراءات التسجيل ونقل الملكية لضمان تجربة استثمارية آمنة وخالية من المتاعب.</p>
+    <!-- ===== STATISTICS ===== -->
+    <section class="stats-section" id="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card reveal">
+                    <span class="number" data-count="150">0<span class="suffix">+</span></span>
+                    <span class="label" data-i18n="statProjects">مشروع عقاري</span>
+                </div>
+                <div class="stat-card reveal">
+                    <span class="number" data-count="500">0<span class="suffix">+</span></span>
+                    <span class="label" data-i18n="statInvestors">مستثمر سعيد</span>
+                </div>
+                <div class="stat-card reveal">
+                    <span class="number" data-count="12">0<span class="suffix">+</span></span>
+                    <span class="label" data-i18n="statYears">سنوات خبرة</span>
+                </div>
+                <div class="stat-card reveal">
+                    <span class="number" data-count="2.5">0<span class="suffix">B</span></span>
+                    <span class="label" data-i18n="statSales">مليار درهم مبيعات</span>
+                </div>
+                <div class="stat-card reveal">
+                    <span class="number" data-count="18">0<span class="suffix">%</span></span>
+                    <span class="label" data-i18n="statROI">متوسط العائد</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- زر الواتساب العائم -->
-    <!-- قم بتعديل رقم الواتساب هنا أيضاً -->
-    <a href="https://wa.me/971569623792?text=مرحباً%20أحمد،%20أنا%20مهتم%20بالعقارات%20في%20دبي" class="whatsapp-float" id="waFloat" target="_blank">
-        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16.6 29c-2.3 0-4.6-.6-6.6-1.7L4 29l1.8-5.8c-1.3-2.1-2-4.5-2-7 0-7.3 6-13.2 13.3-13.2 3.5 0 6.9 1.4 9.4 3.9 2.5 2.5 3.9 5.8 3.9 9.3 0 7.3-6 13.2-13.3 13.2z" fill="#25d366"/><path d="M16.6 4.7C9.9 4.7 4.5 10 4.5 16.7c0 2.2.6 4.3 1.7 6.1l-1.2 3.8 3.9-1.2c1.8 1 3.8 1.6 5.9 1.6 6.7 0 12.1-5.4 12.1-12.1 0-3.2-1.3-6.2-3.5-8.5-2.3-2.2-5.3-3.5-8.6-3.5zm0 21.6c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4 1.2 1.1-3.9-.3-.4c-1.1-1.7-1.7-3.6-1.7-5.7 0-5.8 4.7-10.5 10.5-10.5 2.8 0 5.4 1.1 7.4 3.1 2 2 3.1 4.6 3.1 7.4 0 5.8-4.7 10.5-10.5 10.5zm5.8-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-.1 1.2.2.3.4.4.7.4.3 0 .7-.1 1.4-.4 1.5-.7 2.6-1.5 3-2.3.4-.8.4-1.5.3-1.6-.1-.2-.3-.3-.6-.5z" fill="#fff"/></svg>
-    </a>
+    <!-- ===== FEATURED PROJECTS ===== -->
+    <section class="projects-section section-padding" id="projects">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title reveal" data-i18n="projectsTitle">أبرز <span class="gold">المشاريع</span></h2>
+                <p class="section-subtitle reveal" data-i18n="projectsSub">اختر من بين أفضل المشاريع العقارية في دبي من نخبة المطورين</p>
+            </div>
+            <div class="projects-grid">
+                <!-- Card 1 -->
+                <div class="project-card reveal">
+                    <div class="image-wrap">
+                        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&h=400&fit=crop" alt="Burj Binghatti" loading="lazy">
+                        <span class="badge">Off Plan</span>
+                        <span class="roi-badge">ROI 12%</span>
+                    </div>
+                    <div class="info">
+                        <h3 class="title">Burj Binghatti</h3>
+                        <div class="location">📍 Business Bay, Dubai</div>
+                        <div class="details">
+                            <span><strong>غرف:</strong> 1-4</span>
+                            <span><strong>الإنجاز:</strong> Q4 2026</span>
+                            <span><strong>المطور:</strong> Binghatti</span>
+                        </div>
+                        <div class="price">AED 1.2M <small>تبدأ من</small></div>
+                        <a href="https://wa.me/971569623792?text=مرحباً%20أحمد،%20أنا%20مهتم%20بمشروع%20Burj%20Binghatti" target="_blank" class="btn btn-gold-outline btn-sm" data-i18n="projectBtn">استفسر الآن</a>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="project-card reveal">
+                    <div class="image-wrap">
+                        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&h=400&fit=crop" alt="Sobha Hartland II" loading="lazy">
+                        <span class="badge">للاستلام</span>
+                        <span class="roi-badge">ROI 10%</span>
+                    </div>
+                    <div class="info">
+                        <h3 class="title">Sobha Hartland II</h3>
+                        <div class="location">📍 Mohammed Bin Rashid City, Dubai</div>
+                        <div class="details">
+                            <span><strong>غرف:</strong> 1-5</span>
+                            <span><strong>الإنجاز:</strong> Q2 2026</span>
+                            <span><strong>المطور:</strong> Sobha</span>
+                        </div>
+                        <div class="price">AED 1.8M <small>تبدأ من</small></div>
+                        <a href="https://wa.me/971569623792?text=مرحباً%20أحمد،%20أنا%20مهتم%20بمشروع%20Sobha%20Hartland%20II" target="_blank" class="btn btn-gold-outline btn-sm" data-i18n="projectBtn">استفسر الآن</a>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="project-card reveal">
+                    <div class="image-wrap">
+                        <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=600&h=400&fit=crop" alt="DAMAC Lagoons" loading="lazy">
+                        <span class="badge">Off Plan</span>
+                        <span class="roi-badge">ROI 14%</span>
+                    </div>
+                    <div class="info">
+                        <h3 class="title">DAMAC Lagoons</h3>
+                        <div class="location">📍 DAMAC Hills, Dubai</div>
+                        <div class="details">
+                            <span><strong>غرف:</strong> 2-6</span>
+                            <span><strong>الإنجاز:</strong> Q1 2027</span>
+                            <span><strong>المطور:</strong> DAMAC</span>
+                        </div>
+                        <div class="price">AED 2.4M <small>تبدأ من</small></div>
+                        <a href="https://wa.me/971569623792?text=مرحباً%20أحمد،%20أنا%20مهتم%20بمشروع%20DAMAC%20Lagoons" target="_blank" class="btn btn-gold-outline btn-sm" data-i18n="projectBtn">استفسر الآن</a>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="project-card reveal">
+                    <div class="image-wrap">
+                        <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&h=400&fit=crop" alt="Palm Jebel Ali" loading="lazy">
+                        <span class="badge">فاخر</span>
+                        <span class="roi-badge">ROI 16%</span>
+                    </div>
+                    <div class="info">
+                        <h3 class="title">Palm Jebel Ali</h3>
+                        <div class="location">📍 Jebel Ali, Dubai</div>
+                        <div class="details">
+                            <span><strong>غرف:</strong> 3-7</span>
+                            <span><strong>الإنجاز:</strong> Q3 2028</span>
+                            <span><strong>المطور:</strong> Nakheel</span>
+                        </div>
+                        <div class="price">AED 3.8M <small>تبدأ من</small></div>
+                        <a href="https://wa.me/971569623792?text=مرحباً%20أحمد،%20أنا%20مهتم%20بمشروع%20Palm%20Jebel%20Ali" target="_blank" class="btn btn-gold-outline btn-sm" data-i18n="projectBtn">استفسر الآن</a>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="project-card reveal">
+                    <div class="image-wrap">
+                        <img src="https://images.unsplash.com/photo-1570168007204-db8256f2fbaf?w=600&h=400&fit=crop" alt="Dubai Hills" loading="lazy">
+                        <span class="badge">للاستلام</span>
+                        <span class="roi-badge">ROI 9%</span>
+                    </div>
+                    <div class="info">
+                        <h3 class="title">Dubai Hills Estate</h3>
+                        <div class="location">📍 Dubai Hills, Dubai</div>
+                        <div class="details">
+                            <span><strong>غرف:</strong> 2-5</span>
+                            <span><strong>الإنجاز:</strong> Q4 2025</span>
+                            <span><strong>المطور:</strong> Emaar</span>
+                        </div>
+                        <div class="price">AED 2.6M <small>تبدأ من</small></div>
+                        <a href="https://wa.me/971569623792?text=مرحباً%20أحمد،%20أنا%20مهتم%20بمشروع%20Dubai%20Hills" target="_blank" class="btn btn-gold-outline btn-sm" data-i18n="projectBtn">استفسر الآن</a>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="project-card reveal">
+                    <div class="image-wrap">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop" alt="Downtown Dubai" loading="lazy">
+                        <span class="badge">فاخر</span>
+                        <span class="roi-badge">ROI 11%</span>
+                    </div>
+                    <div class="info">
+                        <h3 class="title">Downtown Dubai</h3>
+                        <div class="location">📍 Downtown, Dubai</div>
+                        <div class="details">
+                            <span><strong>غرف:</strong> 1-4</span>
+                            <span><strong>الإنجاز:</strong> جاهز</span>
+                            <span><strong>المطور:</strong> Emaar</span>
+                        </div>
+                        <div class="price">AED 1.9M <small>تبدأ من</small></div>
+                        <a href="https://wa.me/971569623792?text=مرحباً%20أحمد،%20أنا%20مهتم%20بمشروع%20Downtown%20Dubai" target="_blank" class="btn btn-gold-outline btn-sm" data-i18n="projectBtn">استفسر الآن</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- سكربت تغيير اللغة -->
-    <script>
-        // النصوص المترجمة
-        const translations = {
-            ar: {
-                logoText: "أحمد خلف الله",
-                langToggle: "English",
-                heroTitle: "مستشارك العقاري الموثوق في دبي",
-                heroDesc: "أساعدك في العثور على عقار أحلامك أو أفضل فرصة استثمارية في سوق دبي العقاري بأعلى عائد استثماري، بخبرة واحترافية تامة.",
-                heroBtn: "تواصل معي لبدء استثمارك",
-                servicesTitle: "الخدمات العقارية",
-                srv1Title: "استشارات استثمارية",
-                srv1Desc: "تحليل دقيق لسوق دبي واختيار أفضل المشاريع التي تضمن لك أعلى عائد على الاستثمار (ROI).",
-                srv2Title: "شراء العقارات",
-                srv2Desc: "تسهيل عملية الشراء من المطورين المعتمدين مباشرة أو من السوق الثانوي بأفضل الأسعار المتاحة.",
-                srv3Title: "إدارة المحافظ العقارية",
-                srv3Desc: "متابعة إجراءات التسجيل ونقل الملكية لضمان تجربة استثمارية آمنة وخالية من المتاعب.",
-                waLink: "https://wa.me/971569623792?text=مرحباً%20أحمد،%20أنا%20مهتم%20بالاستثمار%20العقاري%20في%20دبي"
-            },
-            en: {
-                logoText: "Ahmed Khalafalla",
-                langToggle: "العربية",
-                heroTitle: "Your Trusted Dubai Real Estate Advisor",
-                heroDesc: "I help you find your dream home or the best investment opportunity in the Dubai real estate market with the highest ROI, backed by expertise and professionalism.",
-                heroBtn: "Contact Me to Start Investing",
-                servicesTitle: "Real Estate Services",
-                srv1Title: "Investment Consulting",
-                srv1Desc: "Accurate analysis of the Dubai market to select the best projects guaranteeing the highest Return on Investment (ROI).",
-                srv2Title: "Property Purchasing",
-                srv2Desc: "Facilitating purchases directly from authorized developers or the secondary market at the best available prices.",
-                srv3Title: "Portfolio Management",
-                srv3Desc: "Following up on registration and ownership transfer procedures to ensure a safe and hassle-free investment experience.",
-                waLink: "https://wa.me/971500000000?text=Hello%20Ahmed,%20I%20am%20interested%20in%20Dubai%20real%20estate"
-            }
-        };
+    <!-- ===== TOP DEVELOPERS ===== -->
+    <section class="developers-section section-padding-sm" id="developers">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title reveal" data-i18n="developersTitle">أكبر <span class="gold">المطورين</span></h2>
+                <p class="section-subtitle reveal" data-i18n="developersSub">نعمل مع نخبة المطورين العقاريين في دبي لتقديم أفضل الفرص الاستثمارية</p>
+            </div>
+            <div class="developers-grid">
+                <div class="developer-card reveal">
+                    <span class="icon">🏢</span>
+                    <div class="name">Emaar</div>
+                    <div class="count">أكثر من 50 مشروع</div>
+                </div>
+                <div class="developer-card reveal">
+                    <span class="icon">🏗️</span>
+                    <div class="name">DAMAC</div>
+                    <div class="count">أكثر من 40 مشروع</div>
+                </div>
+                <div class="developer-card reveal">
+                    <span class="icon">🏛️</span>
+                    <div class="name">Sobha</div>
+                    <div class="count">أكثر من 30 مشروع</div>
+                </div>
+                <div class="developer-card reveal">
+                    <span class="icon">🌊</span>
+                    <div class="name">Nakheel</div>
+                    <div class="count">أكثر من 25 مشروع</div>
+                </div>
+                <div class="developer-card reveal">
+                    <span class="icon">✨</span>
+                    <div class="name">Ellington</div>
+                    <div class="count">أكثر من 15 مشروع</div>
+                </div>
+                <div class="developer-card reveal">
+                    <span class="icon">🔶</span>
+                    <div class="name">Binghatti</div>
+                    <div class="count">أكثر من 20 مشروع</div>
+                </div>
+                <div class="developer-card reveal">
+                    <span class="icon">🌟</span>
+                    <div class="name">Meraas</div>
+                    <div class="count">أكثر من 15 مشروع</div>
+                </div>
+                <div class="developer-card reveal">
+                    <span class="icon">🏙️</span>
+                    <div class="name">Aldar</div>
+                    <div class="count">أكثر من 20 مشروع</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        let currentLang = 'ar';
+    <!-- ===== WHY CHOOSE ===== -->
+    <section class="why-section section-padding" id="why">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title reveal" data-i18n="whyTitle">لماذا <span class="gold">أحمد خلف الله</span></h2>
+                <p class="section-subtitle reveal" data-i18n="whySub">خبرة واحترافية في سوق دبي العقاري لضمان أفضل عائد على استثمارك</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card reveal">
+                    <span class="icon">🎯</span>
+                    <h3 data-i18n="why1Title">خبرة 12+ سنة</h3>
+                    <p data-i18n="why1Desc">خبرة عميقة في سوق دبي العقاري مع فهم دقيق لاتجاهات السوق وأفضل الفرص الاستثمارية.</p>
+                </div>
+                <div class="why-card reveal">
+                    <span class="icon">🤝</span>
+                    <h3 data-i18n="why2Title">شبكة علاقات قوية</h3>
+                    <p data-i18n="why2Desc">علاقات مباشرة مع كبار المطورين العقاريين في دبي، مما يضمن لك أفضل الأسعار والوحدات.</p>
+                </div>
+                <div class="why-card reveal">
+                    <span class="icon">📊</span>
+                    <h3 data-i18n="why3Title">تحليل استثماري دقيق</h3>
+                    <p data-i18n="why3Desc">تحليل شامل للسوق والعائد الاستثماري لضمان تحقيق أعلى عائد على استثمارك العقاري.</p>
+                </div>
+                <div class="why-card reveal">
+                    <span class="icon">🛡️</span>
+                    <h3 data-i18n="why4Title">خدمة شاملة</h3>
+                    <p data-i18n="why4Desc">من البحث عن العقار إلى إتمام الصفقة وإدارة المحفظة، نقدم لك خدمة متكاملة ومتابعة مستمرة.</p>
+                </div>
+                <div class="why-card reveal">
+                    <span class="icon">🌍</span>
+                    <h3 data-i18n="why5Title">استثمار عالمي</h3>
+                    <p data-i18n="why5Desc">نساعد المستثمرين من جميع أنحاء العالم في الاستثمار في سوق دبي العقاري بكل سهولة وثقة.</p>
+                </div>
+                <div class="why-card reveal">
+                    <span class="icon">🏆</span>
+                    <h3 data-i18n="why6Title">سمعة ممتازة</h3>
+                    <p data-i18n="why6Desc">سمعة راسخة في السوق العقاري بدبي بفضل النزاهة والشفافية والالتزام بتقديم أفضل الخدمات لعملائنا.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        function toggleLanguage() {
-            // تبديل اللغة
-            currentLang = currentLang === 'ar' ? 'en' : 'ar';
-            
-            // تغيير اتجاه الصفحة ونوع الخط
-            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
-            document.documentElement.lang = currentLang;
-            document.body.style.fontFamily = currentLang === 'ar' ? 'var(--font-ar)' : 'var(--font-en)';
+    <!-- ===== INVESTMENT ADVANTAGES ===== -->
+    <section class="investment-section section-padding-sm" id="investment">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title reveal" data-i18n="investTitle">مزايا <span class="gold">الاستثمار</span></h2>
+                <p class="section-subtitle reveal" data-i18n="investSub">دبي وجهة استثمارية عالمية تقدم مزايا فريدة للمستثمرين من جميع أنحاء العالم</p>
+            </div>
+            <div class="investment-grid">
+                <div class="investment-item reveal">
+                    <span class="number">0%</span>
+                    <span class="label" data-i18n="invest1">ضريبة على الدخل</span>
+                </div>
+                <div class="investment-item reveal">
+                    <span class="number">100%</span>
+                    <span class="label" data-i18n="invest2">ملكية أجنبية</span>
+                </div>
+                <div class="investment-item reveal">
+                    <span class="number">10+</span>
+                    <span class="label" data-i18n="invest3">سنوات تأشيرة ذهبية</span>
+                </div>
+                <div class="investment-item reveal">
+                    <span class="number">8-15%</span>
+                    <span class="label" data-i18n="invest4">عائد استثماري سنوي</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            // تحديث النصوص
-            const t = translations[currentLang];
-            document.getElementById('logoText').innerText = t.logoText;
-            document.getElementById('langToggle').innerText = t.langToggle;
-            document.getElementById('heroTitle').innerText = t.heroTitle;
-            document.getElementById('heroDesc').innerText = t.heroDesc;
-            document.getElementById('heroBtn').innerText = t.heroBtn;
-            document.getElementById('heroBtn').href = t.waLink;
-            document.getElementById('servicesTitle').innerText = t.servicesTitle;
-            document.getElementById('srv1Title').innerText = t.srv1Title;
-            document.getElementById('srv1Desc').innerText = t.srv1Desc;
-            document.getElementById('srv2Title').innerText = t.srv2Title;
-            document.getElementById('srv2Desc').innerText = t.srv2Desc;
-            document.getElementById('srv3Title').innerText = t.srv3Title;
-            document.getElementById('srv3Desc').innerText = t.srv3Desc;
-            document.getElementById('waFloat').href = t.waLink;
-        }
-    </script>
-</body>
-</html>
+    <!-- ===== MARKET STATISTICS ===== -->
+    <section class="market-section section-padding" id="market">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title reveal" data-i18n="marketTitle">إحصائيات <span class="gold">السوق</span></h2>
+                <p class="section-subtitle reveal" data-i18n="marketSub">نظرة على أداء سوق دبي العقاري وأبرز المؤشرات</p>
+            </div>
+            <div class="market-grid">
+                <div class="market-chart reveal">
+                    <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:20px;" data-i18n="marketGrowth">نمو قطاعات السوق</h3>
+                    <div class="bar-wrap">
+                        <div class="bar-item">
+                            <span class="label" data-i18n="marketSeg1">الفلل</span>
+                            <div class="track"><div class="fill" data-width="85"></div></div>
+                            <span class="value">85%</span>
+                        </div>
+                        <div class="bar-item">
+                            <span class="label" data-i18n="marketSeg2">الشقق</span>
+                            <div class="track"><div class="fill" data-width="72"></div></div>
+                            <span class="value">72%</span>
+                        </div>
+                        <div class="bar-item">
+                            <span class="label" data-i18n="marketSeg3">التجاري</span>
+                            <div class="track"><div class="fill" data-width="58"></div></div>
+                            <span class="value">58%</span>
+                        </div>
+                        <div class="bar-item">
+                            <span class="label" data-i18n="marketSeg4">الضيافة</span>
+                            <div class="track"><div class="fill" data-width="45"></div></div>
+                            <span class="value">45%</span>
+                        </div>
+                        <div class="bar-item">
+                            <span class="label" data-i18n="marketSeg5">اللوجستي</span>
+                            <div class="track"><div class="fill" data-width="62"></div></div>
+                            <span class="value">62%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="market-chart reveal">
+                    <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:20px;" data-i18n="marketPrices">متوسط الأسعار (مليون درهم)</h3>
+                    <div class="bar-wrap">
+                        <div class="bar-item">
+                            <span class="label" data-i18n="marketPrice1">2020</span>
+                            <div class="track"><div class="fill" data-width="60"></div></div>
+                            <span class="value">1.2M</span>
+                        </div>
+                        <div class="bar-item">
+                            <span class="label" data-i18n="marketPrice2">2021</span>
+                            <div class="track"><div class="fill" data-width="68"></div></div>
+                            <span class="value">1.6M</span>
+                        </div>
+                        <div class="bar-item">
+                            <span class="label" data-i18n="marketPrice3">2022</span>
+                            <div class="track"><div class="fill" data-width="78"></div></div>
+                            <span class="value">2.1M</span>
+                        </div>
+                        <div class="bar-item">
+                            <span class="label" data-i18n="marketPrice4">2023</span>
+                            <div class="track"><div class="fill" data-width="88"></div></div>
+                            <span class="value">2.6M</span>
+                        </div>
+                        <div class="bar-item">
+                            <span class="label" data-i18n="marketPrice5">2024</span>
+                            <div class="track"><div class="fill" data-width="95"></div></div>
+                            <span class="value">3.1M</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROPERTY TYPES ===== -->
+    <section class="property-section section-padding-sm" id="property">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title reveal" data-i18n="propertyTitle">أنواع <span class="gold">العقارات</span></h2>
+                <p class="section-subtitle reveal" data-i18n="propertySub">تشكيلة واسعة من العقارات تناسب جميع الاحتياجات والميزانيات</p>
+            </div>
+            <div class="property-grid">
+                <div class="property-card reveal">
+                    <span class="icon">🏠</span>
+                    <div class="name" data-i18n="prop1">فلل</div>
+                    <div class="desc" data-i18n="prop1Desc">فلل فاخرة في أفضل المجتمعات</div>
+                </div>
+                <div class="property-card reveal">
+                    <span class="icon">🏢</span>
+                    <div class="name" data-i18n="prop2">شقق</div>
+                    <div class="desc" data-i18n="prop2Desc">شقق عصرية في مواقع مميزة</div>
+                </div>
+                <div class="property-card reveal">
+                    <span class="icon">🏖️</span>
+                    <div class="name" data-i18n="prop3">شاطئية</div>
+                    <div class="desc" data-i18n="prop3Desc">عقارات مطلة على البحر</div>
+                </div>
+                <div class="property-card reveal">
+                    <span class="icon">🏗️</span>
+                    <div class="name" data-i18n="prop4">Off Plan</div>
+                    <div class="desc" data-i18n="prop4Desc">أفضل فرص الاستثمار المبكر</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CALCULATORS ===== -->
+    <section class="calculators-section section-padding" id="calculators">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title reveal" data-i18n="calcTitle">حاسبات <span class="gold">عقارية</span></h2>
+                <p class="section-subtitle reveal" data-i18n="calcSub">احسب العائد المتوقع أو قيمة القرض العقاري بسهولة</p>
+            </div>
+            <div class="calc-grid">
+                <!-- ROI Calculator -->
+                <div class="calc-card reveal">
+                    <h3 data-i18n="calcROITitle">💰 حاسبة العائد الاستثماري (ROI)</h3>
+                    <p class="sub" data-i18n="calcROISub">قدّر العائد السنوي المتوقع من استثمارك العقاري</p>
+                    <div class="form-group">
+                        <label data-i18n="calcROIProp">سعر العقار (درهم)</label>
+                        <input type="number" id="roiPrice" placeholder="مثلاً: 2000000" value="2000000">
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="calcROIRent">الإيجار السنوي (درهم)</label>
+                        <input type="number" id="roiRent" placeholder="مثلاً: 180000" value="180000">
+                    </div>
+                    <button class="btn btn-primary btn-sm" id="calcROI" data-i18n="calcBtn">احسب ROI</button>
+                    <div class="result" id="roiResult">
+                        <span class="label" data-i18n="calcROIResult">العائد السنوي المتوقع</span>
+                        <div class="value" id="roiValue">9.00%</div>
+                    </div>
+                </div>
+                <!-- Mortgage Calculator -->
+                <div class="calc-card reveal">
+                    <h3 data-i18n="calcMortTitle">🏦 حاسبة التمويل العقاري</h3>
+                    <p class="sub" data-i18n="calcMortSub">احسب القسط الشهري المتوقع للتمويل العقاري</p>
+                    <div class="form-group">
+                        <label data-i18n="calcMortProp">سعر العقار (درهم)</label>
+                        <input type="number" id="mortPrice" placeholder="مثلاً: 2000000" value="2000000">
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="calcMortDown">الدفعة المقدمة (درهم)</label>
+                        <input type="number" id="mortDown" placeholder="مثلاً: 400000" value="400000">
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="calcMortRate">نسبة الفائدة السنوية (%)</label>
+                        <input type="number" id="mortRate" placeholder="مثلاً: 5" value="5" step="0.1">
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="calcMortTerm">مدة التمويل (سنوات)</label>
+                        <input type="number" id="mortTerm" placeholder="مثلاً: 25" value="25">
+                    </div>
+                    <button class="btn btn-primary btn-sm" id="calcMort" data-i18n="calcBtn">احسب القسط</button>
+                    <div class="result" id="mortResult">
+                        <span class="label" data-i18n="calcMortResult">القسط الشهري المتوقع</span>
+                        <div class="value" id="mortValue">AED 12,345</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="testimonials-section section-padding" id="testimonials">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title reveal" data-i18n="testTitle">آراء <span class="gold">العملاء</span></h2>
+                <p class="section-subtitle reveal" data-i18n="testSub">ما يقوله عملاؤنا عن تجربتهم مع أحمد خلف الله</p>
+            </div>
+            <div class="testimonials-carousel reveal">
+                <div class="testimonials-track" id="testTrack">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="text" data-i18n="test1">"أحمد كان معي خطوة بخطوة في أول استثمار عقاري لي في دبي. بفضل خبرته، حصلت على عائد ممتاز وصفقة رائعة."</p>
+                        <div class="author">
+                            <div class="avatar">م</div>
+                            <div><div class="name">Mohammed Al Suwaidi</div><div class="role" data-i18n="test1Role">مستثمر من الإمارات</div></div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="text" data-i18n="test2">"تعاملت مع أحمد لشراء فيلا في دبي هيلز. كان محترفاً جداً وساعدني في الحصول على أفضل سعر وشروط ميسرة."</p>
+                        <div class="author">
+                            <div class="avatar">س</div>
+                            <div><div class="name">Sarah Al Maktoum</div><div class="role" data-i18n="test2Role">مالكة عقار</div></div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="text" data-i18n="test3">"بفضل نصائح أحمد الاستثمارية، تمكنت من بناء محفظة عقارية قوية في دبي خلال ثلاث سنوات فقط. أنصح به بشدة."</p>
+                        <div class="author">
+                            <div class="avatar">أ</div>
+                            <div><div class="name">Abdulrahman Al Ghurair</div><div class="role" data-i18n="test3Role">مستثمر ومطور</div></div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="text" data-i18n="test4">"أحمد خلف الله هو المستشار العقاري الذي تثق به. شفاف، محترف، ودائماً يضع مصلحة العميل أولاً."</p>
+                        <div class="author">
+                            <div class="avatar">ل</div>
+                            <div><div class="name">Layla Al Sabah</div><div class="role" data-i18n="test4Role">مستثمرة من الكويت</div></div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="text" data-i18n="test5">"عملت مع أحمد لشراء شقة في داون تاون. كانت تجربة سلسة ومريحة بفضل متابعته المستمرة ودقته في التفاصيل."</p>
+                        <div class="author">
+                            <div class="avatar">ن</div>
+                            <div><div class="name">Nasser Al Futtaim</div><div class="role" data-i18n="test5Role">رجل أعمال</div></div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="text" data-i18n="test6">"أحمد ساعدني في الحصول على التأشيرة الذهبية من خلال الاستثمار العقاري. كان داعماً طوال الرحلة."</p>
+                        <div class="author">
+                            <div class="avatar">ر</div>
+                            <div><div class="name">Rania Khalil</div><div class="role" data-i18n="test6Role">مستثمرة من مصر</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonials-nav">
+                <button id="testPrev" aria-label="Previous">‹</button>
+                <button id="testNext" aria-label="Next">›</button>
+            </div>
+            <div class="testimonials-dots" id="testDots"></div>
+        </div>
+    </section>
+
+    <!-- ===== TIMELINE ===== -->
+    <section class="timeline-section section-padding" id="timeline">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title reveal" data-i18n="timelineTitle">رحلتك <span class="gold">الاستثمارية</span></h2>
+                <p class="section-subtitle reveal" data-i18n="timelineSub">خطوات بسيطة للاستثمار في دبي مع أحمد خلف الله</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="left">
+                        <span class="step-number" data-i18n="step1Num">الخطوة 01</span>
+                        <h3 data-i18n="step1Title">استشارة مجانية</h3>
+                        <p data-i18n="step1Desc">نبدأ بجلسة استشارية لفهم أهدافك الاستثمارية وميزانيتك واحتياجاتك.</p>
+                    </div>
+                    <div class="right"></div>
+                    <div class="dot"></div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="left"></div>
+                    <div class="right">
+                        <span class="step-number" data-i18n="step2Num">الخطوة 02</span>
+                        <h3 data-i18n="step2Title">البحث والتحليل</h3>
+                        <p data-i18n="step2Desc">نقوم بتحليل السوق واختيار أفضل الخيارات التي تتوافق مع أهدافك الاستثمارية.</p>
+                    </div>
+                    <div class="dot"></div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="left">
+                        <span class="step-number" data-i18n="step3Num">الخطوة 03</span>
+                        <h3 data-i18n="step3Title">جولة عقارية</h3>
+                        <p data-i18n="step3Desc">نرتب جولات عقارية لمشاهدة العقارات المختارة وتقييمها بشكل مباشر.</p>
+                    </div>
+                    <div class="right"></div>
+                    <div class="dot"></div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="left"></div>
+                    <div class="right">
+                        <span class="step-number" data-i18n="step4Num">الخطوة 04</span>
+                        <h3 data-i18n="step4Title">التفاوض والإتمام</h3>
+                        <p data-i18n="step4Desc">نقوم بالتفاوض على أفضل سعر وشروط، ثم إتمام عملية الشراء بكل احترافية.</p>
+                    </div>
+                    <div class="dot"></div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="left">
+                        <span class="step-number" data-i18n="step5Num">الخطوة 05</span>
+                        <h3 data-i18n="step5Title">إدارة المحفظة</h3>
+                        <p data-i18n="step5Desc">نواصل دعمك بإدارة المحفظة العقارية ومتابعة العائد الاستثماري والفرص المستقبلية.</p>
+                    </div>
+                    <div class="right"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="faq-section section-padding" id="faq">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title reveal" data-i18n="faqTitle">الأسئلة <span class="gold">الشائعة</span></h2>
+                <p class="section-subtitle reveal" data-i18n="faqSub">إجابات على أكثر الأسئلة التي يطرحها المستثمرون</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item reveal">
+                    <div class="question" data-i18n="faq1Q">ما هي خطوات شراء عقار في دبي للمستثمرين الأجانب؟ <span class="icon">+</span></div>
+                    <div class="answer" data-i18n="faq1A">يمكن للمستثمرين الأجانب شراء العقارات في مناطق معينة من دبي. تشمل الخطوات: اختيار العقار، توقيع عقد البيع، دفع الدفعة المقدمة، تسجيل العقار في دائرة الأراضي والأملاك، واستلام المفتاح. نقدم لك الدعم الكامل في كل خطوة.</div>
+                </div>
+                <div class="faq-item reveal">
+                    <div class="question" data-i18n="faq2Q">ما هي مزايا الاستثمار في دبي؟ <span class="icon">+</span></div>
+                    <div class="answer" data-i18n="faq2A">دبي تقدم مزايا عديدة للمستثمرين، منها: إعفاء من ضريبة الدخل، ملكية أجنبية كاملة في بعض المناطق، تأشيرة ذهبية للمستثمرين، بنية تحتية عالمية، وأسواق عقارية تنمو باستمرار.</div>
+                </div>
+                <div class="faq-item reveal">
+                    <div class="question" data-i18n="faq3Q">كيف أحصل على التأشيرة الذهبية من خلال الاستثمار العقاري؟ <span class="icon">+</span></div>
+                    <div class="answer" data-i18n="faq3A">يمكنك الحصول على التأشيرة الذهبية عند شراء عقار بقيمة لا تقل عن 2 مليون درهم إماراتي. نساعدك في تحديد العقارات المؤهلة والتقديم على التأشيرة.</div>
+                </div>
+                <div class="faq-item reveal">
+                    <div class="question" data-i18n="faq4Q">ما هي أفضل المناطق للاستثمار العقاري في دبي؟ <span class="icon">+</span></div>
+                    <div class="answer" data-i18n="faq4A">أفضل المناطق تعتمد على أهدافك الاستثمارية. من أبرز المناطق: Downtown Dubai، Dubai Marina، Palm Jumeirah، Dubai Hills Estate، وBusiness Bay. نقدم لك تحليلاً مفصلاً لاختيار الأنسب لك.</div>
+                </div>
+                <div class="faq-item reveal">
+                    <div class="question" data-i18n="faq5Q">ما هي تكاليف شراء العقار في دبي؟ <span class="icon">+</span></div>
+                    <div class="answer" data-i18n="faq5A">بالإضافة إلى سعر العقار، تشمل التكاليف: رسوم التسجيل في دائرة الأراضي (حوالي 4%)، رسوم الوساطة، رسوم التقييم، ورسوم الصيانة. نوفر لك تفصيلاً كاملاً للتكاليف قبل الشراء.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="contact-section section-padding" id="contact">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title reveal" data-i18n="contactTitle">تواصل <span class="gold">معي</span></h2>
+                <p class="section-subtitle reveal" data-i18n="contactSub">احجز استشارتك المجانية اليوم وابدأ رحلتك الاستثمارية في دبي</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-form-wrap reveal">
+                    <form id="contactForm" novalidate>
+                        <div class="form-group">
+                            <label for="contactName" data-i18n="contactName">الاسم الكامل</label>
+                            <input type="text" id="contactName" placeholder="أدخل اسمك" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail" data-i18n="contactEmail">البريد الإلكتروني</label>
+                            <input type="email" id="contactEmail" placeholder="example@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactPhone" data-i18n="contactPhone">رقم الهاتف</label>
+                            <input type="tel" id="contactPhone" placeholder="+971 XX XXX XXXX">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactSubject" data-i18n="contactSubject">الموضوع</label>
+                            <select id="contactSubject">
+                                <option value="investment" data-i18n="contactSubInvest">استثمار عقاري</option>
+                                <option value="buying" data-i18n="contactSubBuy">شراء عقار</option>
+                                <option value="consultation" data-i18n="contactSubConsult">استشارة</option>
+                                <option value="other" data-i18n="contactSubOther">أخرى</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage" data-i18n="contactMessage">الرسالة</label>
+                            <textarea id="contactMessage" placeholder="اكتب رسالتك هنا..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" data-i18n="contactSend">إرسال الرسالة</button>
+                    </form>
+                </div>
+                <div class="contact-info reveal">
+                    <h3 style="font-size:1.4rem;font-weight:700;margin-bottom:20px;" data-i18n="contactInfoTitle">معلومات <span class="gold">الاتصال</span></h3>
+                    <div class="item">
+                        <div class="icon">📞</div>
+                        <div class="text"><span class="label" data-i18n="contactPhoneLabel">هاتف</span> +971 56 962 3792</div>
+                    </div>
+                    <div class="item">
+                        <div class="icon">✉️</div>
+                        <div class="text"><span class="label" data-i18n="contactEmailLabel">بريد إلكتروني</span> info@ahmedkhalafalla.com</div>
+                    </div>
+                    <div class="item">
+                        <div class="icon">📍</div>
+                        <div class="text"><span class="label" data-i18n="contactAddressLabel">العنوان</span> دبي، الإمارات العربية المتحدة</div>
+                    </div>
+                    <div class="item">
+                        <div class="icon">⏰</div>
+                        <div class="text"><span class="label" data-i18n="contactHoursLabel">ساعات العمل</span> السبت - الخميس: 9:00 ص - 9:00 م</div>
+                    </div>
+                    <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap;">
+                        <a href="https://wa.me/971569623792?text=مرحباً%20أحمد،%20أنا%20مهتم%20بالاستثمار%20العقاري%20في%20دبي" target="_blank" class="btn btn-primary btn-sm" style="min-width:140px;">📱 واتساب</a>
+                        <a href="#hero" class="btn btn-outline btn-sm" style="min-width:140px;" data-i18n="contactBtnBack">العودة للرئيسية</a>
+                    </div>
+                </div>
+            </div>
+            <div class="map-placeholder reveal" id="map">
+                <span data-i18n="mapText">📍 دبي - الإمارات العربية المتحدة</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="brand">
+                    <div class="logo"><span class="gold">✦</span> أحمد <span class="gold">خلف الله</span></div>
+                    <p data-i18n="footerDesc">مستشار عقاري فاخر في دبي، نقدم خدمات استشارية متكاملة للمستثمرين من جميع أنحاء العالم.</p>
+                </div>
+                <div class="col">
+                    <h4 data-i18n="footerNav">روابط سريعة</h4>
+                    <a href="#hero" data-i18n="navHome">الرئيسية</a>
+                    <a href="#projects" data-i18n="navProjects">مشاريع</a>
+                    <a href="#developers" data-i18n="navDevelopers">مطورين</a>
+                    <a href="#why" data-i18n="navWhy">لماذا أحمد</a>
+                    <a href="#testimonials" data-i18n="navTestimonials">آراء العملاء</a>
+                    <a href="#contact" data-i18n="navContact">اتصل بي</a>
+                </div>
+                <div class="col">
+                    <h4 data-i18n="footerServices">الخدمات</h4>
+                    <a href="#" data-i18n="footerSrv1">استشارات استثمارية</a>
+                    <a href="#" data-i18n="footerSrv2">شراء العقارات</a>
+                    <a href="#" data-i18n="footerSrv3">إدارة المحافظ</a>
+                    <a href="#" data-i18n="footerSrv4">خدمات التأشيرة الذهبية</a>
+                    <a href="#" data-i18n="footerSrv5">تحليل السوق</a>
+                </div>
+                <div class="col">
+                    <h4 data-i18n="footerContact">اتصل بنا</h4>
+                    <a href="https://wa.me/971569623792">📱 +971 56 962 3792</a>
+                    <a href="mailto:info@ahmedkhalafalla.com">✉️ info@ahmedkhalafalla.com</a>
+                    <a href="#" data-i18n="footerAddress">📍 دبي، الإمارات العربية المتحدة</a>
+                </div>
+            </div>
+            <div class="bottom">
+                <span data-i18n="footerCopy">© 2026 أحمد خلف الله. جميع الحقوق محفوظة.</span>
+                <div class="socials">
+                    <a href="https://wa.me/971569623792" target="_blank" aria-label="WhatsApp">📱</a>
+                    <a href="#" aria-label="LinkedIn">🔗</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="YouTube">▶️</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== WHATSAPP FLOAT ===== -->
+    <a href="https://wa.me/971569623792?text=مرحباً%20أحمد،%20أنا%20مهتم%20بالاستثمار%20العقاري%20في%20دبي" target="_blank" class="whatsapp-float" id="waFloat" aria-label="WhatsApp">
+        <div class="pulse"></div>
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16.6 29c-2.3 0-4.6-.6-6.6-1.7L4 29l1.8-5.8c-1.3-2.1-2-4.5-2-7 0-7.3 6-13.2 13.3-13.2 3.5 0 6.9 1.4 9.4 3.9 2.5 2.5 3.9 5.8 3.9 9.3 0 7.3-6 13.2-13.3 13.2z" fill="#25d366"/><path d="M16.6 4.7C9.9 4.7 4.5 10 4.5 16.7c0 2.2.6 4.3 1.7 6.1l-1.2 3.8 3.9-1.2c1.8 1 3.8 1.6 5.9 1.6 6.7 0 12.1-5.4 12.1-12.1 0-3.2-1.3-6.2-3.5-8.5-2.3-2.2-5.3-3.5-8.6-3.5zm0 21.6c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4 1.2 1.1-3.9-.3-.4c-1.1-1.7-1.7-3.6-1.7-
